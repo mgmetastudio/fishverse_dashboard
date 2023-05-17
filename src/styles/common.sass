@@ -1,0 +1,88 @@
+// common styles
+body
+    webkit-overflow-scrolling: touch
+    min-width: 375px
+    overflow-x: hidden
+    background: $darkBlue
+    +poppins
+    font-size: 14px
+    line-height: calc(24 / 14)
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    color: $n2
+    +dark-body
+        background: $darkBlue
+        color: $white
+
+a
+    text-decoration: none
+    color: $white
+
+svg,
+img
+    vertical-align: middle
+
+.desktop
+    &-hide
+        +d
+            display: none !important
+    &-show
+        display: none !important
+        +d
+            display: block !important
+    &-text-right
+        +d
+            text-align: right
+
+.tablet
+    &-hide
+        +t
+            display: none !important
+    &-show
+        display: none !important
+        +t
+            display: block !important
+            
+.mobile
+    &-hide
+        +m
+            display: none !important
+    &-show
+        display: none !important
+        +m
+            display: block !important
+
+.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name
+    color: #848688 !important
+
+.react-datepicker
+    background-color: #fff !important
+    color: #848688 !important
+    border: none !important
+    border-radius: 4px !important
+.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected 
+    border-radius: 2px !important
+    background-color: #0D5590 !important
+    color: #fff !important
+    border: 1px solid #EBEBEB !important
+
+.react-datepicker__header
+    background-color: #fff !important
+
+
+.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle
+    display: none !important
+
+.react-datepicker-popper
+    z-index: 5 !important
+
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header
+    color: #848688 !important
+    font-weight: 400 !important
+
+
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--selected, .react-datepicker__year-text--in-selecting-range, .react-datepicker__year-text--in-range 
+    background-color: #fff !important
+
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle 
+    display: none

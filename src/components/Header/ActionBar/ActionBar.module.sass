@@ -1,0 +1,39 @@
+@import ../../../styles/helpers
+
+.selectChain
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 15px
+    +m
+        flex-direction: column
+
+.radio
+    width: 100%
+
+.radio label
+    border: 1px solid #323232
+    border-radius: 16px
+    display: flex
+    height: 60px
+    justify-content: space-between
+    align-items: center
+    padding: 5px 15px
+    cursor: pointer
+    transition: .3s
+    input
+        display: none
+    img
+        max-width: 40px
+        
+.radio .activeButton
+    border: 1px solid #fff
+
+.topSmallBar
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 10px
+    margin-left: auto

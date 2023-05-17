@@ -1,0 +1,169 @@
+@import ../../../styles/helpers
+.section
+    overflow: hidden
+    max-width: 1280px
+    margin: 0 auto
+    +a
+        padding-top: 0
+
+.container
+    max-width: 530px
+    width: 100%
+    padding: 0
+    +t
+        padding-top: 0
+        padding-left: 20px
+        padding-right: 20px
+
+.containerInnerWrapper
+    padding: 32px
+    margin: 0 auto
+    padding-bottom: 20px
+    background: $blue
+    border-radius: 12px
+    h4
+        font-style: normal
+        font-weight: 600
+        font-size: 20px
+        line-height: 23px
+        color: $white
+        text-align: center
+        padding-bottom: 10px
+    p
+        text-align: center
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        color: $white
+
+.daysContainer
+    display: flex
+    flex-direction: row
+    align-items: center
+    flex-wrap: wrap
+
+.dayContainer
+    display: flex
+    position: relative
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    max-width: calc(100% / 7)
+    width: 100%
+    padding-top: 47px
+    padding-bottom: 5px
+    svg
+        cursor: pointer
+    span
+        font-weight: 400
+        font-size: 14px
+        line-height: 20px
+        letter-spacing: -0.03em
+        padding-top: 5px
+
+.freeHunters
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background: $lightBlue
+    border-radius: 8px
+    padding-top: 16px
+    padding-bottom: 20px
+    margin: 16px 0
+    p
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        letter-spacing: -0.03em
+        color: $white
+    span
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        gap: 12px
+        font-weight: 600
+        font-size: 32px
+        line-height: 32px
+        color: $white
+        padding-top: 20px
+    img
+        height: 35px
+    
+
+.rewardClaimButton
+    padding: 12px 10px
+    background: $white
+    border-radius: 8px
+    font-weight: 600
+    font-size: 16px
+    line-height: 19px
+    color: $darkBlue
+    margin-bottom: 10px
+    width: 100%
+    cursor: pointer
+    transition: .3s
+    &:hover
+        opacity: .8
+
+.reward
+    display: flex
+    align-items: center
+    justify-content: center
+    background: #EBEBEB
+    padding: 5px 8px
+    position: absolute
+    border-radius: 4px
+    top: 0
+    gap: 5px
+    z-index: 2
+    color: #0D5590
+    font-weight: 600
+    font-weight: 600
+    font-size: 20px
+    line-height: 20px
+
+.rewardText
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $white
+    padding: 5px 8px
+    position: absolute
+    border-radius: 4px
+    top: 0
+    gap: 5px
+    z-index: 2
+    color: $darkBlue
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    width: 150px
+
+.reward:after, .rewardText:after
+    content: ''
+    width: 10px
+    height: 10px
+    background: $white
+    position: absolute
+    transform: rotate(45deg)
+    bottom: -5px
+    z-index: 1
+    
+
+.counterBlocksRow
+    display: flex
+    justify-content: center
+    gap: 5px
+
+.comingsoon
+    text-transform: uppercase
+    display: inline
+    font-size: 10px
+    color: $green
+    font-weight: 600
+    padding-bottom: 10px
+    vertical-align: super

@@ -1,0 +1,70 @@
+@import ../../styles/helpers
+
+.rowInner
+    padding: 24px
+    padding-top: 14px
+    background: $blue
+    box-sizing: border-box
+    border-radius: 8px
+    & > p
+        margin-bottom: 20px
+        & > span
+            color: $grey
+
+.progressbarred
+    width: 100%
+    height: 2px
+    margin: 10px 0
+    background: #EB5757
+
+.progressbaryellow
+    width: 100%
+    height: 2px
+    margin: 10px 0
+    background: #F2994A
+
+.progressbargreen
+    width: 100%
+    height: 2px
+    margin: 10px 0
+    background: #219653
+
+.progressbarcontainer
+    margin-bottom: 14px
+
+.progressbarinner 
+    padding: 6px 0
+    & p::before
+        content: ""
+        width: 16px
+        height: 16px
+        background: $white
+        border-radius: 50%
+        margin-right: 15px
+        position: relative
+        display: inline-block
+    p
+        font-size: 20px
+        color: $white
+        font-weigth: 600
+    span
+        font-size: 14px
+        margin-left: 10px
+        color: $grey
+
+.legendaryBubble::before
+    background: #F2994A !important
+
+.epicBubble::before
+    background: #BB6BD9 !important
+
+.commonBubble::before
+    background: #F2F2F2 !important
+
+.link
+    color: #000 !important
+
+.rowForItems p
+    display: flex
+    flex-direction: row
+    align-items: center

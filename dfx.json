@@ -1,0 +1,48 @@
+{
+  "canisters": { 
+    "fishverse_ext": {
+      "main": "src/containers/ext_erc721/fishverse_ext.mo",
+      "type": "motoko"
+    },
+    "icrc1_ledger": {
+      "type": "custom",
+      "wasm": "src/containers/icrc1/ic-icrc1-ledger.wasm",
+      "candid": "src/containers/icrc1/icrc1.did",
+      "remote": {
+        "id": {
+          "ic": "2mqbz-jaaaa-aaaag-qbyuq-cai"
+        }
+      }
+    },
+    "internet_identity": {
+      "type": "custom",
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      }
+    },
+    "www": {
+      "dependencies": [
+        "fishverse_ext",
+        "icrc1_ledger",
+        "internet_identity"
+      ],
+      "frontend": {
+        "entrypoint": "build/index.html"
+      },
+      "source": [
+        "build"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "version": 1
+}

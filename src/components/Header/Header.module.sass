@@ -1,0 +1,217 @@
+@import ../../styles/helpers
+
+.header
+    position: relative
+    margin-bottom: -88px
+    width: 100%
+    z-index: 10
+    padding: 20px 0
+    +x
+        padding: 20px 15px
+    +t
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+        padding: 15px 20px
+
+
+.headerBorder
+    box-shadow: inset 0 -1px 0 0 #fff
+    +dark
+        box-shadow: inset 0 -1px 0 0 #fff
+
+.container
+    display: flex
+    align-items: center
+    padding: 0
+    +t
+        justify-content: flex-end
+
+.logo
+    position: absolute
+    left: calc(50% - 85.5px)
+    +m
+        display: none
+    img
+        width: 171px
+
+
+.logoMobile
+    display: none
+    +m
+        display: block
+        position: relative
+        z-index: 99
+        width: 170px
+        img
+            margin-left: -5px
+
+.wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex: 1
+    +t
+        padding-left: 0
+        border: none
+    +m
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        z-index: 10
+        flex-direction: column
+        align-items: stretch
+        justify-content: flex-start
+        height: 100vh
+        overflow: hidden
+        min-height: auto
+        padding: 100px 30px 30px
+        background: #202224
+        visibility: hidden
+        opacity: 0
+        pointer-events: none
+        transition: all .3s
+        overflow: hidden
+        +dark
+            background: #202224
+        &.active
+            visibility: visible
+            opacity: 1
+            pointer-events: all
+    +dark
+        border-color: #fff
+        +m
+            display: flex
+            justify-content: space-between
+            background: #0D5590
+    & > div
+        &:first-child
+            +t
+                margin-right: auto
+            +m
+                margin: 0
+
+.dropdown
+    margin-right: auto
+
+.link
+    color: $white
+    margin-left: 20px
+    +button-2
+    transition: color .2s
+    +m
+        display: flex
+        align-items: center
+        margin: 0 -32px
+        padding: 0 32px
+        height: 50px
+        +poppins
+        font-size: 24px
+        font-weight: 500
+    &:hover,
+    &.active
+        color: $n2
+        +m
+            background: none
+            box-shadow: inset 2px 0 0 #fff
+        +dark
+            color: $n6
+            +m
+                background: none
+                color: $n6
+
+
+.button
+    margin-left: 40px
+    +t
+        margin-left: 32px
+    +m
+        width: 100%
+        height: 48px
+        margin: auto 0 0
+    &.active
+        background: $n2
+        box-shadow: none
+        color: $n8
+
+.notification,
+.user,
+.login
+    margin-left: 24px
+    +m
+        margin-left: 20px
+
+.login
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: $p4
+    transition: background .2s
+    svg
+        fill: $n8
+    &:hover
+        background: darken($p4, 8)
+
+.buttonWhite
+    padding: 0 20px
+    height: 35px
+    margin-left: 30px
+    +m
+        width: 100%
+        margin-left: 0
+        height: 45px
+
+
+.burger
+    display: none
+    +m
+        display: block
+        position: relative
+        z-index: 15
+        margin-left: 20px
+        width: 32px
+        height: 32px
+        background: none
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+        &.active
+            &:before
+                transform: translateY(0) rotate(-45deg)
+            &:after
+                transform: translateY(0) rotate(45deg)
+        &:before,
+        &:after
+            content: ''
+            position: absolute
+            top: 16px
+            left: 6px
+            width: 20px
+            height: 2px
+            background: #fff
+            border-radius: 2px
+            transition: transform .2s
+        &:before
+            transform: translateY(-4px)
+        &:after
+            transform: translateY(3px)
+
+.mobileBottom
+    display: flex
+    flex-direction: row
+    width: fit-content
+    justify-content: flex-end
+    +m
+        flex-direction: column-reverse
+        width: 100%
+
+.mobileTop
+    width: 33%
+    +t
+        width: 100%
+        a
+            font-size: 16px
+            font-weight: 600
+
+.hideMobile
+    display: none !important

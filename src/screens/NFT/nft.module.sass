@@ -1,0 +1,160 @@
+@import ../../styles/helpers
+
+.section
+    overflow: hidden
+    max-width: 1280px
+    margin: 0 auto
+    +a
+        padding-top: 25px
+    +t
+        padding-top: 0
+
+.showAll
+    margin-top: 10px
+    float: right
+    text-decoration: underline
+    cursor: pointer
+    z-index: 2
+    position: relative
+
+.container
+    padding: 0
+    margin: 0
+    padding-bottom: 20px
+    +x
+        padding-left: 15px
+        padding-right: 15px
+        display: flex
+        flex-direction: column
+    +a
+        padding-top: 15px
+        padding-left: 15px
+    +t
+        padding: 15px 20px
+        padding-top: 0
+
+.responsiveHeader
+    line-height: 1
+    margin-bottom: 20px
+    margin-top: 10px
+    float: left
+    width: 50%
+    z-index: 2
+    position: relative
+    +t
+        display: block
+        margin-bottom: 20px
+    +a
+        padding-left: 15px
+    +s
+        padding-top: 30px
+
+.list
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    gap: 10px
+    width: 100%
+    +t
+        gap: 10px
+        width: 58%
+    +m
+        width: calc(100vw - 40px)
+    &>div
+        width: calc(33% - 4px)
+        +x
+            width: calc(50% - 20px)
+        +t
+            width: 100%
+
+
+.tabsHeader
+    display: flex
+    flex-direction: row
+    gap: 15px
+    margin-bottom: 20px
+    margin-top: 5px
+    li:not(:last-child)
+        border-right: solid 1px #323232
+        padding-right: 15px
+    li
+        cursor: pointer
+        +t
+            flex-shrink: 0
+    +x
+        overflow-y: auto
+
+.loaderContainer
+    width: 100% !important
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 14px
+    font-weight: 500
+    gap: 10px
+    svg
+        margin-top: 17px
+
+.pagination
+    display: flex
+    flex-direction: columns
+    justify-content: space-between
+    align-items: center
+    margin: 15px 0
+    width: 20%
+    margin: 0 auto
+    padding-top: 25px
+    ul
+        display: flex
+        li
+            padding: 6px 12px
+            font-size: 16px
+            cursor: pointer
+            &:hover
+                background: #323232
+
+.activePage
+    background: #323232
+
+.arrowBack
+    transform: rotate(-90deg)
+    cursor: pointer
+    margin: 10px
+
+.arrowForward
+    transform: rotate(90deg)
+    cursor: pointer
+    margin: 10px
+
+.currentPage
+    border: solid 1px
+    padding: 2px 7px
+    margin-right: 5px
+
+.pageNumbers
+    margin-left: 5px
+
+.loaderIcon
+    path
+        fill: $green
+    min-height: 350px
+    width: 100%
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &>div
+        height: 40px !important
+
+.MetaContainer
+    display: flex
+    margin: 0 auto
+    max-width: 1280px
+    gap: 70px
+    &>div:nth-child(2)
+        width: 75%
+        
+
+.coming
+    margin-top: 121px

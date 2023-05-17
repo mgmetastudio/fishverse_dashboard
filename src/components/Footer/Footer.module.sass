@@ -1,0 +1,80 @@
+@import ../../styles/helpers
+
+.footer
+    margin-top: 64px
+    border-top: 1px solid rgba(235, 235, 235, 0.3)
+    +t
+        margin-top: 20px
+
+.footerContainer
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 40px 0
+    padding-top: 60px
+    max-width: 1280px
+    margin: 0 auto
+    +x
+        padding: 48px 15px
+    +t
+        flex-wrap: wrap
+        padding: 25px 20px
+
+.rowLogo
+    text-align: center
+    +t
+        width: 100%
+    p
+        margin-top: 15px
+        color: $white
+
+.row
+    +t
+        width: 50%
+        padding-top: 35px
+    p
+        font-weight: 600
+        font-size: 16px
+        line-height: 20px
+        letter-spacing: -0.03em
+        color: #BDBDBD
+        padding-bottom: 10px
+    a
+        font-weight: 400
+        font-size: 16px
+        line-height: 32px
+        letter-spacing: -0.03em
+        text-decoration-line: none
+        color: $white
+        cursor: pointer
+        transition: .3s
+        text-decoration: underline
+        &:hover
+            color: #03BDF6
+            
+
+.rowSocial 
+    display: flex
+    justify-content: flex-start
+    flex-direction: column
+    gap: 16px
+    align-items: center
+    ul
+        display: flex
+        flex-direction: row
+        gap: 16px
+        li
+            transition: .3s
+        li:hover
+            opacity: .8
+    p
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+        letter-spacing: -0.03em
+        color: $grey
+    +t
+        justify-content: center
+        width: 100% !important
+        padding-top: 30px

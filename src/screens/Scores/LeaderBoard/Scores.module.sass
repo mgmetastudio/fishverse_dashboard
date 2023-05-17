@@ -1,0 +1,140 @@
+@import ../../../styles/helpers
+
+.section
+    overflow: hidden
+    max-width: 1280px
+    margin: 0 auto
+
+.container
+    padding: 0
+    margin: 0
+    padding-left: 15px
+    padding-bottom: 15px
+    +x
+        padding-left: 235px
+        padding-right: 20px
+    +t
+        padding-right: 30px
+        padding-left: 200px
+    +a
+        padding-right: 20px
+        padding-left: 15px
+        padding-top: 300px
+    h3
+        font-size: 22px
+
+.firstPlace
+    background: linear-gradient(90deg, rgba(242, 151, 74, 0.5) 0%, rgba(229, 229, 229, 0.2787) 11.84%, rgba(229, 229, 229, 1) 100%) !important
+    border-radius: 12px
+    svg
+        position: absolute
+        left: -12px
+        bottom: -5px
+        path
+            fill: #F2C94C
+    .tablePlace
+        color: #F2C94C
+
+.secondPlace
+    border-radius: 12px
+    svg
+        position: absolute
+        left: -12px
+        bottom: -5px
+        path
+            fill: #BDBDBD
+    .tablePlace
+        color: #BDBDBD
+
+
+.thirdPlace
+    background: linear-gradient(90deg, rgba(242, 153, 74, 0.5) 0%, rgba(229, 229, 229, 0.2787) 11.84%, rgba(229, 229, 229, 1) 100%) !important
+    border-radius: 12px
+    svg
+        position: absolute
+        left: -12px
+        bottom: -5px
+        path
+            fill: #F2994A
+    .tablePlace
+        color: #F2994A
+
+.otherPlayers
+    border-radius: 12px
+
+.tablePlace
+    text-align: left
+    padding: 0 40px
+    width: 20%
+    &>div
+        position: relative
+    +t
+        padding: 0 40px
+        width: 12%
+
+.tablePlaceTitle
+    padding: 0 25px
+    +t
+        padding: 0 25px
+        width: 12% !important
+        min-width: 12% !important
+
+.tableReward
+    &>div
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 5px
+        font-weight: 600
+    img
+        width: 20px
+        height: auto
+
+.dropDownContainer
+    display: flex
+    flex-direction: row
+    gap: 8px
+    padding-bottom: 10px
+
+
+.scoresTableHeader
+    z-index: 2 !important
+
+
+.tableAmount, .tableGuild, .tableScores
+    width: 20%
+    +t
+        flex-shrink: 0
+
+.tableAmount
+    +t
+        width: 30% !important
+        min-width: 30% !important
+
+.tableWrapper
+    +t
+        width: 600px
+
+.scoresTable
+    +t
+        overflow: auto !important
+
+.tinyDate
+    font-size: 12px
+    font-weight: 400
+    padding-bottom: 10px
+    display: block
+
+.datePicker
+    border: solid 1px $lightBlue
+    cursor: pointer
+    width: 120px
+    height: 40px
+    input
+        color: $white
+    input::placehoder
+        color: $white
+
+.noDataMessage
+    padding: 10px
+    text-align: center

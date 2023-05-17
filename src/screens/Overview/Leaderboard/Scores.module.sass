@@ -1,0 +1,232 @@
+@import ../../../styles/helpers
+
+.section
+    overflow: hidden
+    max-width: 1280px
+    margin: 0 auto
+    display: flex
+    flex-direction: row
+    gap: 48px
+    +t
+        flex-direction: column
+        gap: 0
+
+.container
+    padding: 0
+    margin: 0
+    padding: 15px
+    padding-right: 0
+    padding-left: 0
+    max-width: 60%
+    +t
+        max-width: 100%
+        padding: 20px
+    width: 100%
+    h3
+        font-size: 22px
+        font-weight: 500
+
+.firstPlace
+    background: linear-gradient(90deg, rgba(242, 153, 74, 0.5) 0%, rgba(229, 229, 229, 0.2787) 11.84%, $lightBlue 100%) !important
+    border-radius: 12px
+    svg
+        position: absolute
+        left: calc(50% - 16px)
+        bottom: -3px
+        path
+            fill: #F2C94C
+    .tablePlace
+        color: $white
+        &>div
+            color: #F2C94C
+            font-weight: 700
+            font-size: 16px
+
+.secondPlace
+    border-radius: 12px
+    svg
+        position: absolute
+        left: calc(50% - 16px)
+        bottom: -3px
+        path
+            fill: #BDBDBD
+    .tablePlace
+        color: $white
+        &>div
+            color: #BDBDBD
+            font-weight: 700
+            font-size: 16px
+
+.thirdPlace
+    background: linear-gradient(90deg, rgba(242, 153, 74, 0.5) 0%, rgba(229, 229, 229, 0.2787) 11.84%, $lightBlue 100%) !important
+    border-radius: 12px
+    svg
+        position: absolute
+        left: calc(50% - 16px)
+        bottom: -3px
+        path
+            fill: #F2994A
+    .tablePlace
+        color: $white
+        &>div
+            color: #FFC18A
+            font-weight: 700
+            font-size: 16px
+
+.thisIsMyPlace
+    border-radius: 12px
+    margin-top: 6px
+    overflow: hidden
+    background: $lightBlue !important
+    border: 1px solid $white !important
+    border-radius: 8px
+
+.otherPlayers
+    border-radius: 12px
+
+.tablePlace
+    text-align: center
+    position: relative
+    width: 70px !important
+    &>div
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+    +t
+        padding: 0 40px
+        width: 12%
+
+.tablePlaceTitle
+    width: 70px !important
+    min-width: 70px !important
+    +t
+        width: 12% !important
+        min-width: 12% !important
+
+.tableReward
+    &>div
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 5px
+        font-weight: 600
+    img
+        width: 20px
+        height: auto
+
+.dropDownContainer
+    display: flex
+    flex-direction: row
+    gap: 8px
+
+
+.scoresTableHeader
+    z-index: 2 !important
+
+
+.tableAmount, .tableGuild, .tableScores
+    width: 25%
+    text-align: center
+    color: $white
+    +t
+        flex-shrink: 0
+
+.tableAmount
+    text-align: left
+    padding-left: 50px
+    +t
+        width: 30% !important
+        min-width: 30% !important
+
+.tableAmount
+    width: 30% !important
+    min-width: 30% !important
+
+.tableWrapper
+    padding-left: 24px
+    padding-right: 24px
+    overflow: hidden
+    +t
+        width: 600px
+
+.scoresTable
+    +t
+        overflow: auto !important
+
+.tinyDate
+    font-size: 12px
+    font-weight: 400
+    padding-bottom: 10px
+    display: block
+
+.datePicker
+    border: solid 1px #848688
+    cursor: pointer
+    width: 120px
+    height: 40px
+    input
+        color: #fff
+
+.noDataMessage
+    padding: 10px
+    text-align: center
+
+.tableContainer
+    background: $blue
+    border-radius: 8px
+    padding-bottom: 24px
+    padding-top: 0
+    overflow: hidden
+
+.linkToLeaders
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 8px
+    color: #fff
+    width: calc(100% - 48px)
+    margin: 0 auto
+    background: #0D5590
+    font-weight: 600
+    font-size: 16px
+    padding: 12px
+    margin-top: 24px
+    margin-left: 24px
+    margin-right: 24px
+    line-height: 19px
+    color: #fff
+    transition: .3s
+    &:hover
+        opacity: .8
+
+.liveRow
+    background: rgba(13, 85, 144, 0.5)
+    color: #fff
+    font-weight: 500
+    font-size: 14px
+    line-height: 14px
+    padding: 10px 0
+    display: flex
+    justify-content: center
+    align-items: center
+    span svg
+        animation: showModal 1.5s infinite
+
+@keyframes showModal
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.scoresTableBody .tableAmount a
+    color: $white
+
+.linkButtonContainer
+    margin: 0 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 5px
+    button
+        width: calc(100% - 10px)

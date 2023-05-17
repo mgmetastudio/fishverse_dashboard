@@ -1,0 +1,45 @@
+// Version: 1.0.0
+type AccountIdentifier = Text;
+type AccountIdentifier__1 = AccountIdentifier;
+type AccountIdentifier__2 = AccountIdentifier__1;
+type List<T> = ?(T, List<T>);
+type Metadata =
+  {
+    #fungible :
+      {decimals : Nat8; metadata : ?Blob; name : Text; symbol : Text};
+    #nonfungible : {metadata : ?Blob}
+  };
+type Metadata__1 = Metadata;
+type OwnerTokenList = List<TokenIndex__1>;
+type TokenAttributes = {key : Text; value : Text};
+type TokenIndex = Nat32;
+type TokenIndex__1 = TokenIndex;
+type TokenReservation = {quantity : Nat32; tokenType : TokenType};
+type TokenReservationList = List<TokenReservation>;
+type TokenType = Nat16;
+type TokenTypeData =
+  {
+    attributes : ?[TokenAttributes];
+    category : Text;
+    details : Text;
+    image : Text;
+    name : Text;
+    rarity : Text;
+    video : ?Text
+  };
+actor {
+  stable var _allowancesState : [(TokenIndex__1, Principal)];
+  stable var _buyersState : [(AccountIdentifier__2, [TokenIndex__1])];
+  stable var _gifter : Principal;
+  stable var _minter : Principal;
+  stable var _nextToSell : Nat32;
+  stable var _nextTokenId : Nat32;
+  stable var _ownerTokenState : [(AccountIdentifier__2, OwnerTokenList)];
+  stable var _registryState : [(TokenIndex__1, AccountIdentifier__2)];
+  stable var _supply : Nat;
+  stable var _tokenMetadataState : [(TokenIndex__1, Metadata__1)];
+  stable var _tokenReservasionState :
+    [(AccountIdentifier__2, TokenReservationList)];
+  stable var _tokenTypeDataState : [(TokenType, TokenTypeData)];
+  stable var _tokenTypeState : [(TokenIndex__1, TokenType)]
+};

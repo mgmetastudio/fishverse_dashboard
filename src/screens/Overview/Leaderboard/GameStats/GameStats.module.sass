@@ -1,0 +1,87 @@
+@import ../../../../styles/helpers
+
+.container
+    max-width: 40%
+    padding: 15px 0
+    +t
+        max-width: 100%
+        padding: 20px
+    
+
+.containerInner
+    background: $blue
+    border-radius: 8px
+    overflow: hidden
+
+.containerInnerWrap
+    padding-left: 24px
+    padding-right: 24px
+    padding-top: 14px
+    padding-bottom: 20px
+
+.InnerContainerWrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    gap: 9px
+    padding-bottom: 25px
+
+.InnerRow
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    gap: 9px
+    padding-bottom: 14px
+
+.InnerRow
+    font-weight: 400
+    font-size: 14px
+    line-height: 18px
+    text-align: center
+    color: $grey
+
+
+.InnerInfoWrapper
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    background: $lightBlue
+    border-radius: 6px
+    padding: 16px
+
+.innerText
+    font-weight: 400
+    font-size: 14px
+    line-height: 18px
+    text-align: center
+    color: $white
+
+.innerNumber
+    font-weight: 600
+    font-size: 24px
+    line-height: 28px
+    text-align: center
+    color: $white
+    padding-bottom: 3px
+
+.liveRow
+    background: rgba(13, 85, 144, 0.5)
+    color: #fff
+    font-weight: 500
+    font-size: 14px
+    line-height: 14px
+    padding: 10px 0
+    display: flex
+    justify-content: center
+    align-items: center
+    span svg
+        animation: showModal 1.5s infinite
+
+@keyframes showModal
+  0%
+    opacity: 0
+  100%
+    opacity: 1

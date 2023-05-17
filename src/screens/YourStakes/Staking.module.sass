@@ -1,0 +1,311 @@
+@import ../../styles/helpers
+
+
+.MetaContainer
+    display: flex
+    margin: 0 auto
+    max-width: 1280px
+    gap: 70px
+
+.section
+    overflow: hidden
+    max-width: 1280px
+    min-height: 600px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    height: 100%
+    overflow-x: hidden
+    +x
+        padding-left: 20px
+        padding-right: 20px
+    +a
+        padding-top: 10px
+        padding-left: 0
+    +t
+        padding-top: 0
+        padding-left: 20px
+        flex-direction: column
+        border-radius: 0
+        position: relative
+    & .inner
+        padding: 0
+
+
+.container
+    display: flex
+    padding: 0
+    margin: 0
+    gap: 50px
+    & > div
+        width: 50%
+        +t
+            width: 100%
+    +x
+        padding: 0 15px
+    +t
+        flex-direction: column
+
+
+.innerLeft
+    +m
+        padding-top: 0
+
+.radio
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    justify-content: space-between
+    gap: 10px
+    padding-top: 10px
+    label
+        width: calc(50% - 5px)
+        border: 1px solid #323232
+        border-radius: 8px
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        padding: 9px 0
+    input
+        display: none
+
+h5
+    font-size: 16px !important
+    color: #848688
+    font-weight: 500 !important
+    line-height: 1
+
+.inputContainer
+    position: relative
+    padding-top: 10px
+    input
+        background: transparent
+        border: 1px solid #323232
+        border-radius: 8px
+        width: 100%
+        height: 43px
+        padding: 15px
+        font-size: 16px
+        color: #fff
+
+.inputAbsolute
+        position: absolute
+        right: 15px
+        top: 20px
+
+.longTerm
+    padding-top: 8px
+    padding-bottom: 25px
+    font-size: 14px
+    span
+        color: #0D5590
+        padding-left: 5px
+    +m
+        padding-bottom: 20px
+
+div.inputAbsolute .greenColor
+        color: #0D5590
+        padding-left: 15px
+
+.activeButton
+    background: #0D5590
+    p
+        color: #040203
+
+.greenfont
+    color: #0D5590
+
+.whitefont
+    color: #333
+
+.button
+    width: 100%
+    margin-top: 10px
+
+.summaryContainer
+    padding: 0
+
+.innerTopContainer, .innerBottomContainer
+    background: #202224
+    border-radius: 8px
+    margin-bottom: 10px
+    padding: 15px
+
+.dataContainer
+    display: flex
+    +a
+        flex-direction: column
+    & > div
+        width: 50%
+        & > h5
+            font-size: 12px !important
+    & > div > div
+        padding-bottom: 10px
+
+.questionMark
+    background: #0D5590
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    display: inline-flex
+    margin-left: 5px
+    justify-content: center
+    align-items: center
+    font-weight: 700
+    color: #fff
+    position: relative
+
+.buttonConfirm
+    width: 100%
+    margin-top: 15px
+    cursor: not-allowed
+
+.buttonConfirmActive
+    width: 100%
+    margin-top: 15px
+    background: #0D5590
+    cursor: pointer
+
+.buttonClaim
+    background: #0D5590
+    width: 100%
+    margin-top: 10px
+
+.h4
+    padding-bottom: 8px
+
+.infoBoxContainer
+    background: #202224
+    border: 1px solid #323232
+    border-radius: 8px
+    padding: 15px
+    margin-top: 15px
+    +t
+        display: none
+    h5
+        font-size: 20px !important
+        color: #fff
+        font-weight: 600 !important
+        padding-bottom: 15px
+    p
+        padding: 3px 0
+        color: #fff
+        font-size: 14px
+        &::before
+            content: ''
+            display: inline-block
+            height: 10px
+            width: 10px
+            margin-right: 10px
+            border-radius: 50%
+            background: #0D5590
+        & span, button, a
+            color: #fff
+            font-size: 14px
+        button, a
+            text-decoration: underline
+
+.infoBoxContainerMobile
+    display: none
+    background: #202224
+    border: 1px solid #323232
+    border-radius: 8px
+    padding: 15px
+    margin-top: -15px
+    +t
+        display: block
+    h5
+        font-size: 20px !important
+        color: #fff
+        font-weight: 600 !important
+        padding-bottom: 15px
+    p
+        padding: 3px 0
+        color: #fff
+        font-size: 14px
+        &::before
+            content: ''
+            display: inline-block
+            height: 10px
+            width: 10px
+            margin-right: 10px
+            border-radius: 50%
+            background: #0D5590
+        & span, button, a
+            color: #fff
+            font-size: 14px
+        button, a
+            text-decoration: underline
+
+.statsContainer
+    display: flex
+    flex-direction: row
+    width: 100%
+    gap: 8px
+    padding: 10px 0
+    .colum
+        width: 33%
+        +t
+            width: 100%
+        text-align: center
+        background: #FFFFFF
+        border: 1px solid #EBEBEB
+        color: #333
+        border-radius: 8px
+        padding: 15px
+    +t
+        flex-direction: column
+
+.statisticsContainer
+    display: flex
+    flex-direction: row
+    width: 100%
+    gap: 8px
+    padding: 10px 0
+    .colum
+        width: 50%
+        +t
+            width: 100%
+        text-align: center
+        background: #202224
+        border-radius: 8px
+        padding: 15px
+        border: 1px solid #323232
+    +t
+        flex-direction: column
+
+.statsSection
+    padding-top: 0px
+    padding-bottom: 5px
+    +x
+        padding-top: 0px
+
+.statisticsSection
+    padding: 30px 0
+    padding-bottom: 0px
+    +x
+        padding: 30px 15px
+
+.price
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    font-size: 20px
+    h5
+        font-weight: 600 !important
+
+.claimRewards
+    background: #0D5590
+    color: #fff
+    font-size: 16px
+    cursor: not-allowed
+    padding: 14px 0
+    border-radius: 8px
+    font-weight: 600
+
+.claimRewards.usable
+    cursor: inherit
+
+.faidInContainer
+    width: 100%

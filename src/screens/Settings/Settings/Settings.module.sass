@@ -1,0 +1,581 @@
+@import ../../../styles/helpers
+
+.section
+    overflow: hidden
+    max-width: 1280px
+    margin: 0 auto
+
+.container
+    padding: 0
+    margin: 0 auto
+    max-width: 530px
+    padding-bottom: 15px
+    +t
+        padding-right: 20px
+        padding-left: 20px
+    h3
+        font-size: 22px
+
+.containerInnerTop
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    padding-bottom: 15px
+
+.containerInnerBottom
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    width: 100%
+    padding: 10px 0
+
+.containerInnerBottomMerge
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    padding: 25px 0
+
+.containerInnerBottomLast
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    padding: 15px 0
+
+.containerInnerTwoRows
+    display: flex
+    padding: 25px 0
+
+.toggleContainer
+    display: flex
+    flex-direction: column
+    gap: 15px
+    padding: 10px 0
+
+.toggle
+    display: flex
+    align-items: flex-start
+    gap: 15px
+
+.avatarPreview
+    width: 25%
+
+.label
+    font-weight: 400
+    font-size: 14px
+    line-height: 16px
+    color: $white
+    padding-bottom: 7px
+
+.labelMerge
+    width: 25%
+    flex-shrink: 0
+    font-weight: 700
+    font-size: 16px
+    line-height: 19px
+    color: $white
+
+.labelToggle
+    width: 25%
+    font-weight: 700
+    font-size: 16px
+    line-height: 19px
+    color: $white
+    flex-wrap: nowrap
+    flex-shrink: 0
+
+.toggleDescription
+    h6
+        font-weight: 500
+        font-size: 16px
+        line-height: 19px
+        color: $white
+        padding-bottom: 7px
+    p
+        font-weight: 400
+        font-size: 14px
+        line-height: 16px
+        color: $white
+
+input
+    background: transparent
+    width: 100%
+    height: 43px
+    padding: 0 15px
+    border: 1px solid #323232
+    border-radius: 8px
+    font-weight: 500
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: -0.03em
+    color: $white
+
+.inputPassword
+    display: flex
+    flex-direction: column
+    gap: 10px
+    +m
+        width: 75%
+    input
+        color: #fff
+
+.guild
+    padding: 12px 16px
+    gap: 10px
+    width: 100%
+    height: 43px
+    background: $lightBlue
+    border: 1px solid $lightBlue
+    border-radius: 8px
+    color: $white
+    display: flex
+    align-items: center
+    font-weight: 500
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: -0.03em
+
+.socialAccounts
+    width: 100%
+    height: 43px
+    margin: 5px 0
+    position: relative
+    svg
+        position: absolute
+        top: calc(50% - 9px)
+        left: 15px
+    input
+        padding-left: 45px
+        &:focus
+            border: solid 1px $green
+            background: #202224
+
+.socialAccountsEmpty
+    width: 100%
+    height: 43px
+    margin: 5px 0
+    position: relative
+    svg
+        position: absolute
+        top: calc(50% - 9px)
+        left: 15px
+    input
+        background: $lightBlue !important
+        padding-left: 45px
+        &:focus
+            border: solid 1px #0D5590
+            background: $lightBlue
+
+.location
+    width: 100%
+    height: 43px
+    margin: 5px 0
+    position: relative
+    input
+        background: $lightBlue !important
+        padding-left: 15px
+        &:focus
+            border: solid 1px #0D5590
+            background: $lightBlue
+
+.avatarDescrition
+    flex-shrink: 0
+    h5
+        font-weight: 600
+        font-size: 24px !important
+        line-height: 28px
+        color: #FFFFFF
+        margin-bottom: 10px
+    p
+        font-weight: 600
+        font-size: 16px
+        line-height: 19px
+        color: #FFFFFF
+    +x
+        flex-shrink: 1
+    +t
+        margin-bottom: 16px
+
+
+.avatarInner
+    background: $white
+    width: 160px
+    height: 160px
+    border-radius: 50%
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 28px
+    text-transform: uppercase
+    font-weight: 600
+    img
+        object-fit: cover
+        width: 100%
+        height: auto
+    +x
+        width: 120px
+        height: 120px
+
+.avatarInnerSmaller
+    background: $darkBlue
+    color: #fff
+    width: 64px
+    overflow: hidden
+    height: 64px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 20px
+    text-transform: uppercase
+    font-weight: 600
+    img
+        object-fit: cover
+        width: 100%
+        height: auto
+    +m
+        width: 80px
+        height: 80px
+
+.delete
+    color: $white
+    font-weight: 600
+    font-size: 16px
+    line-height: 19px
+    width: 100px
+    height: 43px
+    cursor: pointer
+    transition: .4s
+    &:hover
+        opacity: .8
+    +m
+        width: 75px
+
+.saveCancel
+    display: flex
+    gap: 10px
+    position: relative
+    width: 100%
+    margin-left: auto
+    padding-top: 14px
+
+.cancel
+    width: 150px
+    height: 43px
+    background: #202224
+    border-radius: 8px
+    font-weight: 600
+    font-size: 16px
+    line-height: 19px
+    color: $white
+    transition: .4s
+    &:hover
+        opacity: .8
+
+.save
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    gap: 10px
+    width: 100%
+    height: 43px
+    background: #0D5590
+    border-radius: 8px
+    font-weight: 600
+    font-size: 16px
+    line-height: 19px
+    color: #fff
+    transition: .4s
+    &:hover
+        opacity: .8
+
+.update
+    display: flex
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 1
+    cursor: pointer
+    width: 100px
+    height: 43px
+    font-weight: 600
+    font-size: 16px
+    line-height: 19px
+    color: $green
+    transition: .4s
+    +m
+        width: 80px
+    &:hover
+        opacity: .8
+    input
+        width: 100%
+        cursor: pointer
+        position: absolute
+        z-index: 2
+        opacity: 0
+
+.updated
+    display: flex
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 1
+    cursor: not-allowed
+    width: 100px
+    height: 43px
+    font-weight: 600
+    font-size: 16px
+    line-height: 19px
+    color: $green
+    transition: .4s
+    +m
+        width: 80px
+    &:hover
+        opacity: .8
+    input
+        width: 100px
+        flex-shrink: 0
+        cursor: pointer
+        position: absolute
+        z-index: 2
+        opacity: 0
+
+
+.deleteUpdate
+    display: flex
+    +m
+        margin-left: 0
+        justify-content: space-evenly
+
+.closeAccount
+    font-weight: 600
+    font-size: 16px
+    line-height: 19px
+    color: #EB5757
+    cursor: pointer
+    transition: .4s
+    &:hover
+        opacity: .8
+
+.comingsoon
+    text-transform: uppercase
+    display: inline
+    font-size: 10px
+    color: $green
+    font-weight: 600
+    padding-bottom: 10px
+    vertical-align: super
+
+.savedSettingsNote
+    color: $green
+    font-size: 12px
+    margin-left: 5px
+
+    .confirmPopup
+    padding: 10px
+
+.confirmP
+    text-align: center
+
+.confirmButton
+    background: $green
+    padding: 7px 15px
+    width: 100px
+    font-size: 14px
+    font-weight: 600
+    border-radius: 8px
+    &:hover
+        opacity: .8
+
+.errorMessage
+    border: solid 1px #a72020
+    border-radius: 4px
+    padding: 5px 12px
+    color: #fff
+    margin: 3px 0px
+    margin-top: 15px
+    svg
+        margin-right: 10px
+
+.successMessage
+    border: solid 1px $green
+    border-radius: 4px
+    padding: 5px 12px
+    color: #fff
+    margin: 3px 0px
+    margin-top: 15px
+    svg
+        margin-right: 10px
+
+.explanationMerge
+    font-size: 12px
+    margin-top: 5px
+    margin-left: 5px
+
+.mergeError
+    font-size: 14px
+    margin-top: 5px
+    margin-left: 5px
+    color: #a72020
+    
+.inputWrap
+    display: flex
+    flex-direction: row
+    width: 75%
+    +i
+        flex-direction: column
+
+.loaderIcon
+    height: initial !important
+    margin-left: 10px
+    svg
+        fill: $green
+
+.loaderIconRemove
+    height: initial !important
+    margin-left: 10px
+    svg
+        fill: $white
+
+.walletInput
+    background: $lightBlue
+    border: 1px solid $lightBlue
+    border-radius: 8px
+    color: $white
+    width: 100%
+    height: 43px
+    border-radius: 8px
+    display: flex
+    align-items: center
+    padding: 0 15px
+    +m
+        width: 100%
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+
+.gameSettingsContainer, .additionalInformationContainer, .passwordChangeContainer
+    background: $blue
+    border-radius: 8px
+    padding: 24px
+    input
+        background: $lightBlue
+        border: 1px solid $lightBlue
+        border-radius: 8px
+        color: $white
+        width: 100%
+
+.additionalInformationContainer, .passwordChangeContainer
+    margin-top: 16px
+
+.profileTitle
+    font-weight: 600
+    font-size: 20px
+    line-height: 24px
+    letter-spacing: -0.03em
+    color: $white
+    display: block
+    padding-bottom: 10px
+
+.nicknameAndAvatar
+    display: flex
+    flex-direction: row
+    width: 100%
+    justify-content: center
+    +t
+        gap: 24px
+
+.nicknameWrapper
+    width: 81%
+
+.changeAvatar
+    display: flex
+    justify-content: space-between
+    width: 19%
+    +m
+        width: 80px
+        gap: 20px
+        align-items: center
+
+.textareaInput
+    width: 100%
+    background: $lightBlue
+    border: 1px solid $lightBlue
+    border-radius: 8px
+    padding: 18px
+    color: $white
+    textarea
+        padding-top: 5px
+        margin-bottom: -5px
+        display: block
+        color: $white
+        background: none
+        border: none
+        font-family: inherit
+        font-size: 16px
+        line-height: 24px
+        resize: none
+
+.passwordWrapper
+    padding: 10px 0
+
+.buttonLoader
+    fill: #020304 !important
+    width: 30px !important
+    height: 30px !important
+
+.settingsSaved
+    opacity: 0
+    display: none
+    transition: .3
+    transition-delay: .3
+    transition-property: display
+
+.settingsSaving
+    display: block
+    background: #3A4908
+    border-radius: 8px
+    font-weight: 400
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: -0.03em
+    color: #FFFFFF
+    padding: 12px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 12px
+    opacity: 1
+    transition: .3
+    transition-delay: .3
+    transition-property: display
+
+.settingsSavingError
+    display: block
+    border-radius: 8px
+    font-weight: 400
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: -0.03em
+    color: #FFFFFF
+    padding: 12px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 12px
+    opacity: 1
+    border: solid 1px #a72020
+    padding: 5px 12px
+    color: #fff
+    margin: 3px 0px
+    margin-top: 15px
+
+input::placeholder
+    color: $white

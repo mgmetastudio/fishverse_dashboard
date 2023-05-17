@@ -1,0 +1,124 @@
+@import ../../styles/helpers
+
+.section
+    overflow: hidden
+    max-width: 1280px
+    margin: 0 auto
+    +t
+        display: none
+
+.container
+    padding: 0
+    margin: 0
+    padding-left: 15px
+    padding-bottom: 15px
+    +x
+        padding-left: 235px
+        padding-right: 15px
+
+.breadcrumb
+    background: tranaparent
+    border: 1px solid #fff
+    display: flex
+    justify-content: space-evenly
+    border-radius: 8px
+    margin: 20px 0
+    padding: 20px 0
+
+.abovebc
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.walletbalance
+    background: #202224
+    border: 1px solid #323232
+    border-radius: 8px
+    padding: 10px 15px
+
+.balance
+    margin-right: 20px
+    color: #848688
+
+.itemrarity
+    color: rgba(255, 255, 255, .5)
+
+.colectedcount
+    font-size: 20px
+    font-weight: 600
+    margin-right: 7px
+
+.totalunlocked
+    font-size: 20px
+
+.liststyle
+    width: 10px
+    height: 10px
+    background: red
+    position: relative
+
+.marketWrap
+    display: flex
+    gap: 20px
+
+.head
+    margin-bottom: 64px
+    text-align: center
+    +m
+        margin-bottom: 32px
+
+.wrapper
+    margin: 0 -16px
+
+.item
+    display: flex !important
+    position: relative
+    flex-direction: column
+    justify-content: space-between
+    width: 33%
+    padding-top: 45px
+    padding-bottom: 30px
+    align-items: center
+    border: 1px solid #323232
+    background: linear-gradient(0deg, #040203 0%, #202224 100%)
+    border-radius: 8px
+
+.item img
+    max-height: 160px
+    height: 100%
+    width: auto !important
+
+.preview
+    flex-shrink: 0
+    width: 160px
+    display: flex
+    justify-content: center
+    align-items: center
+    +d
+        width: 112px
+    img
+        width: 100%
+
+.status
+    position: absolute
+    top: 15px
+    right: 15px
+    border-radius: 4px
+    background: #848688
+    color: #646464
+    text-transform: none
+
+
+
+.details
+    flex-grow: 1
+    padding: 0 24px 0 16px
+    +x
+        padding-right: 0
+    +d
+        padding: 0 0 0 16px
+
+.subtitle
+    margin-bottom: 8px
+    margin-top: 20px
+    +body-bold-2

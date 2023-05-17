@@ -1,0 +1,138 @@
+@import ../../../../styles/helpers
+
+.containerDownload
+    position: relative
+    p
+        color: #ffffff
+        font-size: 12px
+
+.pic
+    border-radius: 8px
+    width: 100%
+    margin-bottom: 15px
+
+.gameStatistics
+    margin-top: 15px
+    margin-bottom: 10px
+    font-size: 12px
+    color: $white
+    .green
+        color: $green
+
+.downloadGameButton
+    background: #0D5590
+    display: flex
+    flex-direction: row
+    gap: 4px
+    align-items: center
+    justify-content: center
+    width: 100%
+    text-align: center
+    color: #fff
+    font-weight: 600
+    border-radius: 8px
+    line-height: 1
+    padding: 10px 12px
+    transition: 1s
+    margin-top: 10px
+    &:hover
+        opacity: .8
+    svg
+        margin-left: 6px
+
+.downloadGameButtonAvailable
+    background: $white
+    display: flex
+    flex-direction: row
+    gap: 4px
+    align-items: center
+    justify-content: center
+    width: 100%
+    text-align: center
+    color: #fff
+    font-weight: 600
+    border-radius: 8px
+    line-height: 1
+    padding: 10px 12px
+    transition: 1s
+    margin-top: 10px
+    &:hover
+        opacity: .8
+
+.gameAvailability
+    padding: 10px 0
+    p
+        color: $white
+        padding-bottom: 5px
+    svg
+        margin-right: 10px
+
+.countDownTimer
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 4px
+
+.requirementsContainer
+    display: none
+    padding: 30px 0
+    flex-direction: row
+    flex-wrap: wrap
+    font-size: 10px
+    gap: 15px
+    h4
+        width: 100%
+        flex-shrink: 0
+        font-weight: 600
+        display: flex
+        align-items: center
+        gap: 5px
+        span
+            color: $green
+        svg
+            margin-left: 10px
+    +t
+        display: flex
+    +m
+        flex-direction: column
+        font-size: 14px
+        gap: 20px
+        padding-left: 15px
+
+
+.requirements
+    p
+        text-transform: uppercase
+        color: $white
+        font-size: 14px
+        padding-bottom: 10px
+    span
+        color: $white
+
+.helpfulLinksTitle
+    padding-top: 15px
+    font-size: 16px
+    display: block
+
+.helpfulLinks
+    color: $green
+    text-decoration: underline
+    cursor: pointer
+
+.helpfulLinks2
+    color: $green
+    font-weight: 600
+
+.downloadButtons
+    display: flex
+    flex-direction: row
+    gap: 6px
+    padding-top: 10px
+    a
+        flex-grow: 0
+        width: 50%
+        transition: .3
+        &:hover
+            opacity: .9
+        svg
+            width: 100%

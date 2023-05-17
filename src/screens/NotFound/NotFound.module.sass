@@ -1,0 +1,36 @@
+@import ../../styles/helpers
+
+.section
+    height: calc(100vh + 8px)
+    margin: 0
+    position: relative
+    &:before
+        z-index: 1
+        content: ''
+        width: 100%
+        height: calc(100vh + 8px)
+        position: absolute
+        background: linear-gradient(180deg, #04020385, #ffffff00)
+
+.notFound
+    margin: auto
+    text-align: center
+    padding-top: 30vh
+    position: relative
+    z-index: 3
+    h1
+        font-size: 128px
+        line-height: 150px
+        font-weight: 900
+        color: #fff
+    h2
+        font-size: 24px
+        line-height: 32px
+        font-weight: 900
+    p
+        font-size: 16px
+        color: #fff
+        padding: 20px 0
+    .goBack
+        padding: 0 60px
+        cursor: pointer

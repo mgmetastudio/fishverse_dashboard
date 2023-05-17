@@ -1,0 +1,73 @@
+@import ../../../styles/helpers
+    
+.section
+    overflow: hidden
+    max-width: 1280px
+    margin: 0 auto
+
+.body
+    padding: 0
+    margin: 0
+    padding-left: 15px
+    padding-bottom: 15px
+    +x
+        padding-left: 235px
+        padding-right: 15px
+    +t
+        padding-left: 200px
+    +a
+        padding-left: 15px
+
+.title
+    margin-bottom: 48px
+    +m
+        margin-bottom: 32px
+
+h3
+    padding: 15px 0 !important
+    font-size: 26px
+    font-weight: 600
+
+
+.container
+    display: flex
+    justify-content: space-between
+    padding: 0
+    gap: 48px
+    +t
+        flex-direction: column
+
+.list
+    display: flex
+    justify-content: flex-end
+    width: calc(100% - 300px)
+    gap: 10px
+    +t
+        width: 100%
+        padding-bottom: 25px
+    +m
+        display: block
+        margin: 0
+
+.rewards
+    width: 240px
+    box-sizing: border-box
+    +x
+        width: 230px
+    +t
+        width: 100%
+        padding-bottom: 25px
+
+
+.card
+    width: 50%
+
+.btns
+    margin-top: 48px
+    text-align: center
+    +m
+        margin-top: 32px
+    .button
+        .loader
+            margin: 0 16px 0 2px
+            transform: scale(.8)

@@ -1,0 +1,456 @@
+@import ../../styles/helpers
+
+.card
+    display: flex
+    flex-direction: column
+    border-radius: 8px
+    overflow: hidden
+    background: $n8
+    border: 1px solid $n6
+    color: $n1
+    transition: border-color .2s
+    cursor: pointer
+    position: relative
+    height: 310px
+    &:hover
+        border-color: $n5
+    +t
+        background: #1b1b1b !important
+        height: 100%
+    +dark
+        background: linear-gradient(0deg, #040203 0%, #202224 100%)
+        border-color: #323232
+        color: $n7
+    &.row
+        flex-direction: row
+        border-radius: 8px
+        +x
+            display: block
+        .preview
+            flex-shrink: 0
+            width: 256px
+            +x
+                width: 100%
+
+            &:before
+                display: none
+                +x
+                    display: block
+        .body
+            display: flex
+            position: absolute
+            bottom: 0
+            flex-direction: column
+            flex-grow: 1
+        .line
+            margin-bottom: 16px
+        .price
+            display: flex
+            flex-direction: column-reverse
+        .old
+            margin: 6px 0 0
+            text-decoration: none
+        .options
+            flex-wrap: nowrap
+            +x
+                flex-wrap: wrap
+        .option
+            &:nth-child(2)
+                flex-shrink: 0
+        .foot
+            margin-top: auto
+    &.car
+        .line
+            margin-bottom: 0
+            +d
+                margin-bottom: 8px
+        .price
+            display: flex
+            flex-direction: column-reverse
+        .old
+            margin: 6px 0 0
+            text-decoration: none
+        .option
+            &:nth-child(2)
+                flex-shrink: 0
+
+.preview
+    position: relative
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+        width: 100%
+        height: auto
+        object-fit: cover
+        transition: transform 1s
+        &:hover
+            transform: scale(1.1)
+
+.listInner
+    width: calc(33% - 5px)
+    +d
+        width: calc(50% - 5px)
+    +t
+        width: 100%
+    +m  
+        width: calc(50% - 5px)
+    +a
+        width: 100%
+
+
+.category
+    position: absolute
+    top: 16px
+    right: 16px
+    z-index: 2
+    border-radius: 4px
+
+.body
+    flex-grow: 1
+    padding: 24px 22px
+    position: absolute
+    bottom: 0
+    width: 100%
+    transition: all 1s
+    +t
+        position: relative
+
+.bodyTransform
+    flex-grow: 1
+    padding: 24px 22px
+    position: absolute
+    bottom: 0
+    width: 100%
+    transition: all 1s
+    transform: translate(0, -15px)
+    +t
+        position: relative
+
+.line
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 8px
+    +t
+        margin-bottom: 0px
+
+.title
+    +body-bold-2
+    font-weight: 600
+
+.options
+    display: flex
+    flex-wrap: wrap
+    margin: -8px 0 16px -12px
+
+.option
+    display: flex
+    margin: 8px 0 0 12px
+    +caption-2
+    color: $n4
+
+.comment
+    display: flex
+    align-items: flex-start
+    margin-bottom: 20px
+    +caption-2
+    color: $n4
+
+.flex
+    display: flex
+    justify-content: space-between
+
+.number
+    margin-right: 4px
+    +caption-bold-2
+
+.modal
+    display: flex
+    border-radius: 18px
+    overflow: hidden
+    +m
+        flex-direction: column
+        padding: 0
+        border-radius: 0
+
+.modalRight
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 50%
+    padding: 40px
+    +m
+        width: 100%
+    .rank
+        font-size: 24px
+    .title
+        font-size: 32px
+        padding: 10px 0
+    .description
+        padding: 0 10px
+        font-size: 14px
+        color: #848688
+        margin-bottom: 30px
+    .purchase
+        background: $white
+        cursor: pointer
+        text-align: center
+        border-radius: 8px
+        padding: 14px
+        font-size: 20px
+        color: #000
+        transition: .2s
+        &:hover
+            opacity: .9
+        img
+            width: 28px
+            margin: 0 5px 2px 15px
+    .purchased
+        background: #202224
+        cursor: not-allowed
+        text-align: center
+        border-radius: 8px
+        padding: 14px
+        font-size: 20px
+        font-weight: 600
+        color: #848688
+        transition: .2s
+        &:hover
+            opacity: .9
+    .close
+        text-align: center
+        padding: 15px
+        font-size: 16px
+        cursor: pointer
+        +m
+            display: none
+
+.modalLeft
+    width: 50%
+    background: #202224
+    display: flex
+    align-items: center
+    justify-content: center
+    +m
+        width: 100%
+
+.videoContainer
+    width: 100%
+    height: 100% !important
+    overflow: hidden
+    video
+        height: 100% !important
+        width: 100% !important
+        object-fit: cover
+        overflow-x: hidden
+
+.videoContainerFull
+    width: 100%
+    height: 100%
+    object-fit: cover
+    margin: -4px
+    position: relative
+    overflow: hidden
+    &>video
+        height: 100% !important
+        width: 100% !important
+        object-fit: cover
+
+.ownerContainer
+    border: 1px solid #848688
+    border-radius: 8px
+    padding: 10px
+    font-weight: 600
+    +t
+        margin-bottom: 20px
+    p:last-child
+        color: #fff
+        text-overflow: ellipsis
+        overflow: hidden
+
+
+.revealContainer
+    position: absolute
+    z-index: 5
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    top: 0
+    height: 100%
+    opacity: 1
+
+.popContainer
+    position: relative
+
+.revealContainer
+    padding: 5% 15%
+    backdrop-filter: blur(20px)
+    overflow-y: auto
+    +t
+        padding: 15px
+
+.revealContainerInnerHeader
+    text-align: center
+    h3
+        font-size: 30px
+    p
+        font-size: 16px
+        padding-bottom: 10px
+        color: #CDCDCD
+
+
+.revealContainerInnerBody
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    gap: 20px
+    +t
+        gap: 10px
+
+.revealContainerInnerFooter
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    padding-top: 30px
+
+.preview1
+    max-width: calc(33% - 20px)
+    border-radius: 8px
+    width: 100%
+    height: 300px
+    position: relative
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    +t
+        max-width: calc(50% - 10px)
+        height: 180px
+    img
+        width: 100%
+        height: auto
+        object-fit: cover
+        transition: transform 1s
+
+.headerList
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    padding-bottom: 20px
+    gap: 20px
+    +t
+        gap: 10px
+        padding-bottom: 30px
+        flex-wrap: wrap
+        justify-content: center
+    li
+        background: #040203
+        padding: 5px 20px
+        border-radius: 8px
+        font-size: 12px
+    span
+        background: #ffffff
+        border-radius: 50%
+        color: #000000
+        font-weight: 600
+        padding: 0 4px
+        margin-right: 8px
+
+.linkButton
+    background: #ffffff
+    color: #040203
+    padding: 10px 180px
+    border-radius: 8px
+    font-size: 20px
+    font-weight: 600
+    +t
+        width: 100%
+        padding: 10px
+        text-align: center
+
+.loaderIcon
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    margin-left: 5px
+    svg
+        fill: #040203
+
+.buttonReveal
+    background: #ffffff
+    border-radius: 8px
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    height: 39px
+    font-size: 20px
+    font-weight: 600
+    transition: .5s
+    cursor: pointer
+    &:hover
+        opacity: .9
+    span
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+.headerCounter
+    text-transform: uppercase
+    flex-grow: 1
+
+.lottieAnim
+    position: absolute
+    object-fit: cover
+    min-width: 500px
+    min-height: 500px
+    +t
+        min-width: 350px
+        min-height: 350px
+    +m
+        min-width: 230px
+        min-height: 230px
+
+.instruction
+    padding: 20px 10px
+    font-size: 11px
+
+.CardHoverButton
+    position: absolute
+    display: flex
+    justify-content: center
+    padding: 10px
+    transition: all .3s
+    bottom: 0
+    width: 100%
+    background: #323232
+    font-weight: 600
+    transform: translate(0, 50px)
+
+.ExtraClassHover
+    position: absolute
+    display: flex
+    justify-content: center
+    transition: all .3s
+    padding: 10px
+    bottom: 0
+    width: 100%
+    background: #323232
+    font-weight: 600
+    transform: translate(0, 0)
+
+.countDownTimer
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 4px

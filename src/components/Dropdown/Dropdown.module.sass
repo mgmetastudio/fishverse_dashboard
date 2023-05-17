@@ -1,0 +1,99 @@
+@import ../../styles/helpers
+
+.dropdown
+    position: relative
+    z-index: 3
+    margin-left: 10px
+    background: $blue
+    border-radius: 8px
+    &.active
+        z-index: 10
+        .head
+            .arrow
+                svg
+                    transform: rotate(180deg)
+        .body
+            visibility: visible
+            opacity: 1
+            transform: translateY(0)
+
+.head
+    position: relative
+    height: 40px
+    width: 55px
+    line-height: 36px
+    padding-left: 10px
+    padding-right: 5px
+    cursor: pointer
+    -webkit-user-select: none
+    user-select: none
+    border-radius: 8px
+
+
+.selection
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+.arrow
+    position: absolute
+    top: 50%
+    right: 9px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    transform: translateY(-50%)
+    svg
+        fill: $white
+        transition: transform .2s
+    +dark
+        svg
+            fill: $white
+
+.body
+    position: absolute
+    top: calc(100% + 2px)
+    left: 0
+    right: 0
+    padding: 8px 0
+    border-radius: 8px
+    background: $n8
+    visibility: hidden
+    opacity: 0
+    transform: translateY(3px)
+    transition: all .2s
+    width: 80px
+    +dark
+        background: #0D5590
+
+
+.option
+    padding: 8px
+    font-size: 14px
+    font-weight: 500
+    transition: color .2s
+    cursor: pointer
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    &:hover,
+    &.selectioned
+        color: $p1
+
+.empty
+    .head
+        height: 26px
+        padding: 0 36px 0 14px
+        box-shadow: none
+        background: none
+        line-height: 26px
+        &:hover
+            box-shadow: none
+    .arrow
+        right: 12px
+        width: 24px
+        height: 24px
+        box-shadow: none
+    .option
+        padding: 8px 14px

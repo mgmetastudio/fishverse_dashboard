@@ -1,0 +1,111 @@
+@import ../../../../styles/helpers
+
+.tableContainer
+    +t
+        display: block
+        overflow-x: auto
+        white-space: nowrap
+        font-size: 12px
+        &>div:first-child
+            +t
+                overflow-y: auto
+        & div
+            +t
+                font-size: 12px
+
+.tableNumber
+    text-align: center
+    width: 5% !important
+    min-width: 5% !important
+
+.tableAmount
+    text-align: left !important
+    width: 50% !important
+    min-width: 50% !important
+    +t
+        width: 30% !important
+        min-width: 30% !important
+
+.tableDate
+    width: 150px !important
+
+.tableDateTitle
+    width: 150px !important
+
+.tableClaimAvailability
+    width: 140px !important
+    color: #848688
+    font-weight: 600
+
+
+.tableClaim, .tableUnstake
+    width: 140px !important
+    text-align: center
+    button
+        background: $green
+        color: #040203
+        font-weight: 600
+        font-size: 16px
+        border-radius: 4px
+        padding: 7px 30px
+        +d
+            font-size: 14px
+            padding: 7px 15px
+    &:hover
+        opacity: .9
+
+.tableUnstake
+    button
+        background: #202224
+        color: #848688
+    
+.nextPage
+    color: #fff
+    padding: 4px 8px
+    background: #323232
+    margin: 0 2px
+
+.paginationContainer
+    display: flex
+    justify-content: center
+    padding: 10px 10px
+    margin-top: 10px
+
+.tableAdditional, .tableAdditionalTitle
+    width: 55% !important
+    +m
+        width: 400px !important
+        min-width: 400px !important
+
+    
+
+.tableAdditional > div
+    display: flex
+    flex-direction: row
+    align-items: center
+
+.buttonAdditionalReward
+    background: #fff
+    border-radius: 4px
+    color: #000000
+    font-weight: 400
+    padding: 2px 5px
+    margin: 2px 4px
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 5px
+    span
+        background: #000000
+        color: #ffffff
+        width: 18px
+        height: 18px
+        border-radius: 50%
+        font-size: 12px
+        padding: 0 4px
+        display: flex
+        justify-content: center
+        align-items: center
+    p
+        color: #040203
+        font-weight: 500

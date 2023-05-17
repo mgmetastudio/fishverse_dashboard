@@ -1,0 +1,85 @@
+@import ../../../styles/helpers
+    
+.section
+    overflow: hidden
+    max-width: 1280px
+    margin: 0 auto
+
+.title
+    margin-bottom: 48px
+    +m
+        margin-bottom: 32px
+
+.body
+    padding: 0
+    margin: 0
+    padding-left: 0
+    padding-bottom: 15px
+    +x
+        padding-left: 235px
+        padding-right: 15px
+    +t
+        padding-left: 200px
+    +a
+        padding-left: 15px
+        padding-top: 10px
+
+
+.container
+    display: flex
+    justify-content: space-between
+    padding: 0
+    gap: 48px
+    +m
+        flex-direction: column
+
+.list
+    display: flex
+    justify-content: flex-end
+    flex-wrap: wrap
+    width: calc(100% - 250px)
+    gap: 10px
+    +m
+        width: 100%
+    & > div
+        width: calc(50% - 5px)
+        +x  
+            width: 100%
+        +m
+            padding-bottom: 15px
+    +m
+        display: block
+        margin: 0
+    &> div
+        width: 100%
+        padding: 0
+
+.rewards
+    width: 240px
+    +x
+        width: 230px
+    +m
+        width: 100%
+        padding-bottom: 25px
+
+h3
+    font-size: 26px
+    font-weight: 600
+    padding: 0 !important
+    padding-bottom: 20px !important
+    line-height: 1
+
+.btns
+    margin-top: 48px
+    text-align: center
+    +m
+        margin-top: 32px
+    .button
+        .loader
+            margin: 0 16px 0 2px
+            transform: scale(.8)
+
+.statistics 
+    width: calc(100% - 300px)
+    +t
+        width: 100%

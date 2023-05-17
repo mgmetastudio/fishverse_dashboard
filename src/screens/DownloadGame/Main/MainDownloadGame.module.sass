@@ -1,0 +1,44 @@
+@import ../../../styles/helpers
+
+.section
+    overflow: hidden
+    max-width: 1280px
+    margin: 0 auto
+
+.container
+    padding: 0
+    margin: 0
+    padding-bottom: 15px
+    +x
+        padding-left: 15px
+        padding-right: 15px
+    +a
+        padding-left: 15px
+        padding-top: 15px
+    +t
+        padding-top: 0
+        padding-left: 20px
+        padding-right: 20px
+    h3
+        font-size: 22px
+
+.containerInner
+    display: flex
+    flex-direction: row
+    gap: 30px
+    +d
+        flex-direction: column
+
+.left 
+    position: relative
+    width: 70%
+    +d
+        width: 100%
+
+.right 
+    position: relative
+    width: 30%
+    p
+        color: $white
+    +d
+        width: 100%

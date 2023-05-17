@@ -1,0 +1,181 @@
+@import ../../../styles/helpers
+    
+.walletKey
+    white-space: nowrap
+    overflow: hidden
+    max-width: 140px
+    color: #0D5590
+    color: #fff
+
+.buttonConnect
+    padding: 0 20px
+    height: 38px
+    margin-left: 10px
+    background: $blue
+    border-radius: 4px
+    span
+        color: $white
+    +x
+        margin-right: 15px
+    +m
+        width: 100%
+        margin-left: 0
+        height: 45px
+
+.popContainer
+    padding: 20px
+    h4
+        font-size: 20px
+        margin-bottom: 15px
+        font-weight: 600
+        color: #fff
+
+.selectChain
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 15px
+    p
+        color: #fff
+    +m
+        flex-direction: column
+
+.radio
+    width: 100%
+
+.radio label
+    border: 1px solid #fff
+    color: #fff
+    border-radius: 16px
+    display: flex
+    height: 60px
+    justify-content: space-between
+    align-items: center
+    padding: 5px 15px
+    cursor: pointer
+    transition: .2s
+    input
+        display: none
+    img
+        max-width: 40px
+    &:hover
+        background: #ffffff
+        color: #0D5590
+        
+.radio .activeButton
+    border: 1px solid #fff
+
+.errorMessage
+    border: solid 1px #a72020
+    border-radius: 4px
+    padding: 5px 12px
+    color: #fff
+    margin: 3px 0px
+    margin-top: 15px
+    svg
+        margin-right: 10px
+
+.successMessage
+    border: solid 1px #fff
+    border-radius: 4px
+    padding: 5px 12px
+    color: #fff
+    margin: 3px 0px
+    margin-top: 15px
+    svg
+        margin-right: 10px
+
+.innerConnected
+    display: flex
+    justify-content: space-between
+    font-size: 18px
+    button
+        background: #fff
+        color: #0D5590
+        padding: 5px 15px
+        font-weight: 600
+        border-radius: 4px
+    +m
+        flex-wrap: wrap
+        justify-content: flex-start
+        gap: 10px
+    p
+        +m
+            width: 100%
+            margin-bottom: 10px
+    button
+        +m
+            padding: 10px 30px
+            width: calc(50% - 5px)
+            font-size: 16px
+
+.innerWalletId
+    display: flex
+    margin: 15px 0
+    padding: 7px 10px
+    border-radius: 8px
+    background: #fff
+    color: #0D5590
+    width: 100%
+    height: 38px
+    p
+        color: #0D5590
+        font-weight: 400
+.innerViewCopy
+    & > *
+        color: #fff
+        margin-right: 15px
+        cursor: pointer
+        text-decoration: underline
+
+.topSmallBar
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 10px
+
+.selectChainId
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 10px
+    margin-top: 10px
+    gap: 15px
+    span
+        margin-right: 20px
+        width: 30%
+
+.chainId
+    padding: 10px 0px
+    border: solid 1px #323232
+    border-radius: 8px
+    width: 35%
+    cursor: pointer
+    img
+        padding: 0 10px
+    &:hover
+        background: #323232
+
+
+.mergeButton
+    text-align: center
+    width: 100%
+    text-transform: uppercase
+    font-size: 16px
+    font-weight: 600
+    color: #333
+
+.mergeButtonContainer
+    background: #fff
+    color: #333
+    &:hover
+        opacity: .8
+
+.successMessage2
+    color: #fff
+
+.errorMessage2
+    color: #a72020

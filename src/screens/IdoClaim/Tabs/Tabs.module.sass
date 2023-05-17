@@ -1,0 +1,47 @@
+@import ../../../styles/helpers
+
+.tabsContainer
+    padding: 0
+    max-width: 1280px
+    margin: 0 auto
+    padding-bottom: 20px
+    margin-top: 20px
+    +x
+        padding-left: 15px
+        padding-right: 15px
+    +a
+        padding-top: 10px
+    +m
+        flex-direction: column
+        border-radius: 0
+        position: relative
+
+.tabsHeader
+    display: flex
+    li
+        background: $white
+        color: $darkBlue
+        margin-right: 8px
+        padding: 8px 16px
+        border-radius: 4px
+        cursor: pointer
+        font-size: 16px
+        font-weight: 600
+        transition: .2s
+        +m
+            margin: 0 4px
+            text-align: center
+            font-size: 11px
+
+.activeTab
+    background: $darkBlue !important
+    color: $white !important
+    border: solid 1px $white 
+
+.tabsBody
+    margin-top: 10px
+    & > div
+        +t
+            margin: 0 5px
+    & > div > div
+        padding: 0
