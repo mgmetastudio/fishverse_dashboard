@@ -96,7 +96,7 @@ const Item = ({ className, item, row, walletIndex }) => {
                             </div>
                         </div>
                         <div>
-                            {item.tokenId ? ownedItem : notOwnedItem}
+                            {item.tokenId >= 0 ? ownedItem : notOwnedItem}
                         </div>
                     </div>
                 </div>
