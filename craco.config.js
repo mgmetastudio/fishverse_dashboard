@@ -66,9 +66,9 @@ module.exports = {
     alias: {},
     plugins: [
       new webpack.EnvironmentPlugin({
-        ICRC1_LEDGER_CANISTER_ID: canisters["icrc1_ledger"],
-        II_CANISTER_ID: process.env.INTERNET_IDENTITY_CANISTER_ID,
-        EXT_CANISTER_ID: process.env.FISHVERSE_EXT_CANISTER_ID,
+        ICRC1_LEDGER_CANISTER_ID: canisters["icrc1_ledger"][network],
+        II_CANISTER_ID: canisters["internet_identity"][network],
+        EXT_CANISTER_ID: canisters["fishverse_ext"][network],
         DFX_NETWORK: process.env.DFX_NETWORK || "local",
         NODE_ENV: isDevelopment,
       }),

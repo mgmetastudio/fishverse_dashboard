@@ -21,4 +21,4 @@ dfx deploy icrc1_ledger --argument "(record {
   };
 },)"
 
-dfx deploy www
+dfx deploy fishverse_dashboard

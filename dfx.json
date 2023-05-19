@@ -2,7 +2,12 @@
   "canisters": { 
     "fishverse_ext": {
       "main": "src/containers/ext_erc721/fishverse_ext.mo",
-      "type": "motoko"
+      "type": "motoko",
+      "remote": {
+        "id": {
+          "ic": "e2thf-7qaaa-aaaag-qcbbq-cai"
+        }
+      }
     },
     "icrc1_ledger": {
       "type": "custom",
@@ -20,11 +25,11 @@
       "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
       "remote": {
         "id": {
-          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+          "ic": "fgte5-ciaaa-aaaad-aaatq-cai"
         }
       }
     },
-    "www": {
+    "fishverse_dashboard": {
       "dependencies": [
         "fishverse_ext",
         "icrc1_ledger",

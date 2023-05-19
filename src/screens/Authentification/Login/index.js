@@ -28,7 +28,7 @@ const Login = ({ setShowResults, setShowReset }) => {
   if (process.env.DFX_NETWORK === "local") {
     iiUrl = `http://localhost:4943/?canisterId=${process.env.II_CANISTER_ID}`;
   } else if (process.env.DFX_NETWORK === "ic") {
-    iiUrl = `https://${process.env.II_CANISTER_ID}.ic0.app`;
+    iiUrl = `https://identity.internetcomputer.org/`;
   } else {
     iiUrl = `https://${process.env.II_CANISTER_ID}.dfinity.network`;
   }
