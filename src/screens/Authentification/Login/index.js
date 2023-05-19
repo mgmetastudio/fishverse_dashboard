@@ -10,6 +10,7 @@ import { AuthClient } from '@dfinity/auth-client';
 import { HttpAgent } from "@dfinity/agent";
 import { useHistory } from 'react-router-dom';
 import { successSvg } from '../../../constants/svg';
+import { getHttpAgent } from '../../../functions/network';
 
 
 const Login = ({ setShowResults, setShowReset }) => {
@@ -48,13 +49,7 @@ const Login = ({ setShowResults, setShowReset }) => {
     });
     
     const authIdentity = authClient.getIdentity();
-    const agent = new HttpAgent({ identity: authIdentity });
-
-    if (process.env.DFX_NETWORK !== "ic") {
-      await agent.fetchRootKey().catch(err => {
-        console.warn("Unable to fetch root key. Check to ensure that your local replica is running", err);
-      });
-    }
+    const agent = await getHttpAgent({ identity: authIdentity});
 
     setIdentity(authIdentity)
     setAgent(agent)

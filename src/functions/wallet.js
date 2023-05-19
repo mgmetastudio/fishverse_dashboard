@@ -1,8 +1,9 @@
-import { useNFTActor } from "../hooks/useActor";
+import { getNFTActor } from "./actor";
+
 
 export const getOwnedNFTWallet = async (agent, tokenTypeData) => {
     let wallet = [];
-    const fishverse_ext =  useNFTActor(agent);
+    const fishverse_ext =  getNFTActor(agent);
     if (tokenTypeData && Object.keys(tokenTypeData).length > 0 && agent && fishverse_ext) {
         return await fishverse_ext.walletOfOwner().then((result) => {
             for (let i = 0; i < result.length; i++) {
@@ -23,7 +24,7 @@ export const getOwnedNFTWallet = async (agent, tokenTypeData) => {
 
 export const getReservedNFTWallet = async (agent, tokenTypeData) => {
     let wallet = [];
-    const fishverse_ext = useNFTActor(agent);
+    const fishverse_ext = getNFTActor(agent);
     if (tokenTypeData && Object.keys(tokenTypeData).length > 0 && agent && fishverse_ext) {
         return fishverse_ext.reservedWalletOfOwner().then((result) => {
             let wallet = [];

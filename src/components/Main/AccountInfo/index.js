@@ -6,9 +6,9 @@ import { agentState, identityState } from "../../../atoms";
 import { useRecoilState } from "recoil";
 import { AuthClient } from "@dfinity/auth-client";
 import { useHistory } from "react-router";
-import { HttpAgent } from "@dfinity/agent";
 import { useFvsTokenBalance } from "../../../hooks/useFvsTokenBalance";
 import { editSvg, expSvg } from "../../../constants/svg";
+import { getHttpAgent } from "../../../functions/network";
 
 const AccountInfo = () => {
   const [identity, setIdentity] = useRecoilState(identityState);
@@ -33,16 +33,9 @@ const AccountInfo = () => {
       let principal = restoredIdentity.getPrincipal().toText();
 
       if (principal.length == 63){
+        const agent = await getHttpAgent({identity:restoredIdentity})
         setIdentity(restoredIdentity);
-        const agent = new HttpAgent({identity:restoredIdentity});
-        if (process.env.DFX_NETWORK !== "ic") {
-          await agent.fetchRootKey().catch(err => {
-            console.warn("Unable to fetch root key. Check to ensure that your local replica is running");
-            console.error(err);
-          });
-        }    
         setAgent(agent);
-
         localStorage.setItem("principal", principal);
       } else {
         localStorage.setItem("principal", "");

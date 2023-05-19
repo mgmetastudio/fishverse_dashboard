@@ -23,6 +23,6 @@ dfx canister call icrc1_ledger icrc1_transfer '(record {
 },)'
 
 dfx canister call fishverse_ext mintNFT "(record { to = (variant { \"principal\" = principal \"mb3sz-c3733-cv2k4-bojm2-34wwm-vfjcv-zfwxk-ezlno-bpq4p-w3l7u-eqe\" }); metadata = opt vec{1}; tokenType = 1; } )"
-dfx canister call fishverse_ext reserveNFT "(record { to = (variant { \"principal\" = principal \"putfb-atpkc-xoc57-bkpli-ptfoi-sj3tt-2bv2s-kirh6-xjxtl-v7isk-7ae\" }); quantity = 5; tokenType = 1; } )"
+dfx canister call fishverse_ext reserveNFT "(record { to = (variant { \"principal\" = principal \"gxrtc-iql2j-jte6g-rg2hw-rzng7-7tdt3-25r2y-qb6bi-y6za4-y6cm6-3ae\" }); quantity = 3; tokenType = 1; } )"
 dfx canister call fishverse_ext setTokenTypeData "(123, \"Special Item\", \"https://internetcomputer.org/img/IC_logo_docs.svg\", \"Legendary\", \"Special\", \"Special details\", null, null)"
 dfx canister call fishverse_ext supply "(\"\")"

@@ -2,9 +2,9 @@ import { useState } from "react";
 import cn from "classnames";
 import styles from "./Card.module.sass";
 import Modal from "../Modal";
-import { useNFTActor } from "../../hooks/useActor";
 import { useRecoilState } from "recoil";
 import { agentState, identityState, walletState } from "../../atoms";
+import { getNFTActor } from "../../functions/actor";
 
 
 const Item = ({ className, item, row, walletIndex }) => {
@@ -14,7 +14,7 @@ const Item = ({ className, item, row, walletIndex }) => {
     const [isClaiming, setIsClaiming] = useState(false);
     const [visible, setVisible] = useState(false);
     const [isHovering, setIsHovering] = useState(false);
-    const nftContract = useNFTActor(agent);
+    const nftContract = getNFTActor(agent);
 
     const notOwnedItem = <button className="button" onClick={() => { claimItem(item.tokenType) }} disabled={isClaiming}>{isClaiming ? "Claiming item..." : "Claim item"}</button>;
     const ownedItem = <div className={styles.purchased}>Claimed</div>;

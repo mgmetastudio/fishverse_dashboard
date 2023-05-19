@@ -1,6 +1,6 @@
 import { atom, selector } from "recoil";
 import { getOwnedNFTWallet, getReservedNFTWallet } from "./functions/wallet";
-import { useNFTActor } from "./hooks/useActor";
+import { getNFTActor } from "./functions/actor";
 
 
 export const fetchWallet = selector({
@@ -22,7 +22,7 @@ export const fetchTokenTypeData = selector({
   key: 'fetchTokenTypeData',
   get: async ({ get }) => {
     const agent = get(agentState);
-    const fishverse_ext = useNFTActor(agent);
+    const fishverse_ext = getNFTActor(agent);
 
     if (fishverse_ext && agent) {
       return await fishverse_ext.getTokenTypeData().then((result) => {
