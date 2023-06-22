@@ -19,7 +19,7 @@ import DailyQuests from "./screens/DailyQuests";
 import { RecoilRoot } from "recoil";
 
 function requireAuth(component) {
-    if (!localStorage.getItem('principal')) {
+    if (!localStorage.getItem('accessToken')) {
         return Redirect("/");
     }
     return component;
@@ -31,7 +31,7 @@ function App({ Component, pageProps }) {
             <Router {...pageProps}>
                 <Switch>
                     <Route exact path="/" render={() => {
-                        if (!localStorage.getItem('principal')) {
+                        if (!localStorage.getItem('accessToken')) {
                             return (<Page>
                                 <Authentification />
                             </Page>)

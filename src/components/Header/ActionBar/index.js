@@ -8,7 +8,6 @@ const ActionBar = (props) => {
 
   return (
         <div className={styles.topSmallBar}>
-          { loggedIn ? <Dropdown className={styles.dropdown}/> : null }
           { loggedIn ? <Notifications className={styles.dropdown}/> : null }
         </div>
   );

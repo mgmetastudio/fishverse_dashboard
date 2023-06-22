@@ -79,7 +79,7 @@ const Profile = () => {
                 <div className={styles.avatarInnerSmaller}>
                   {avatar != null
                     ? <picture>
-                      <label className={styles.update} htmlFor="avatar"><img src={avatar} alt={avatarText.substring(0, 2)} /><input type="file" name="avatar" onChange={handleFileSelect} /></label>
+                      <label className={styles.update} htmlFor="avatar"><img src={avatar} alt={avatarText.substring(0, 2)} /><input type="file" name="avatar" /></label>
                     </picture>
                     : <span className={styles.avatarLetters}>{avatarText.substring(0, 2)}</span>
                   }

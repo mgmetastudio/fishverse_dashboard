@@ -3,6 +3,8 @@ import Login from "./Login";
 import cn from "classnames";
 import styles from "./Authentification.module.sass";
 import {isMobile} from 'react-device-detect';
+import Register from "./Register";
+import ResetPassword from "./ResetPassword";
 
 const dBgImg = {
   backgroundImage: 'url(/images/auth-bg-desktop.jpg)',
@@ -22,7 +24,11 @@ const Authentification = () => {
   const [showReset, setShowReset] = useState(false);
   return (
     <div style={ isMobile ? mBgImg : dBgImg } className={cn("container", styles.container)}>
-      <Login setShowResults={setShowResults} setShowReset={setShowReset} /> 
+      { (showResults && !showReset) ? <Register setShowResults={setShowResults} /> 
+        : (!showResults && !showReset) ? <Login setShowResults={setShowResults} setShowReset={setShowReset} /> 
+        : (!showResults && showReset) ? <ResetPassword/>
+        : null
+        }
     </div>
   );
 };

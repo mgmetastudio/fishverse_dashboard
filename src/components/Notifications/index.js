@@ -13,26 +13,6 @@ const Dropdown = ({ className, value, setValue, options, empty }) => {
   const [metamask, setMetamask] = useState(localStorage.getItem('metamask'));
   const email = localStorage.getItem('email');
 
-  useEffect(() => {
-    const getUserData = () => {
-        const token = localStorage.getItem('accessToken');
-        fetch('https://api-fisher.thefishverse.com//user/profile/', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'authorization': `Bearer ${token}`
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            setMetamask(data.metamask_address);
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-    }
-    getUserData();
-  }, []);
   
   const yourCode = leaderBoardHistory.filter(e => e.email === email).length > 0 ? leaderBoardHistory.filter(e => e.email === email)[0].code : null;
 

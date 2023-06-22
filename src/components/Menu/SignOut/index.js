@@ -13,7 +13,7 @@ const SignOut = (props) => {
   const history = useHistory();
 
   const logout = async () => {
-    localStorage.setItem("principal", "")
+    localStorage.setItem("accessToken", "")
     history.push("/")
   }
 

@@ -36,7 +36,7 @@ const Popup = ({ outerClassName, visible, onClose, children }) => {
           <OutsideClickHandler onOutsideClick={onClose}>
             {children}
             <button className={styles.close} onClick={onClose}>
-              <a href='/staking'><Icon name="close" size="24" /></a>
+              <a href='#'><Icon name="close" size="24" /></a>
             </button>
           </OutsideClickHandler>
         </div>

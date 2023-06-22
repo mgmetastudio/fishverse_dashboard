@@ -4,7 +4,7 @@ import AccountInfo from "./AccountInfo"
 
 
 const Main = () => {
-  const avatar = localStorage.getItem('avatar');
+  const avatar = localStorage.getItem('avatar') ?? "null";
 
   return (
     <div className={cn("section", styles.section)}>
@@ -17,8 +17,8 @@ const Main = () => {
         <div className={styles.top}>
           <div className={styles.avatar}>
               <div className={styles.avatarInner}>
-              {avatar != null && avatar != 'undefined'
-                ? <img src={avatar} alt={avatarText} />
+              {avatar != null && avatar != 'null'
+                ? <img src={avatar}/>
                 : <span className={styles.avatarLetters}>FV</span> 
               }
               </div>

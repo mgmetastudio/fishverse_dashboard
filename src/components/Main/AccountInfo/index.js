@@ -27,27 +27,7 @@ const AccountInfo = () => {
   const salt = <img height="20" src="/images/SALT-coin.png" />
   const fresh = <img height="20" src="/images/FRESH-coin.png" />
   
-  const restoreIdentitySession = async () => {
-      const authClient = await AuthClient.create();
-      const restoredIdentity = authClient.getIdentity();
-      let principal = restoredIdentity.getPrincipal().toText();
-
-      if (principal.length == 63){
-        const agent = await getHttpAgent({identity:restoredIdentity})
-        setIdentity(restoredIdentity);
-        setAgent(agent);
-        localStorage.setItem("principal", principal);
-      } else {
-        localStorage.setItem("principal", "");
-        history.push("/")
-      }
-}
-  
-  useEffect(() => {
-    restoreIdentitySession();
-  }, [])
-
-  return (
+    return (
     <div className={cn(styles.infoContainer)}>
       <h2 className={cn(styles.title)}>
         {guildName != 'None' ? <span className={styles.guild}>[ {guildName} ] </span> : null}

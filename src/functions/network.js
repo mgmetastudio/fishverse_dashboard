@@ -12,3 +12,13 @@ export const getHttpAgent = async (agentOptions) => {
     }
     return agent
 }
+
+export const getInternetIdentityUrl = () => {
+    if (process.env.DFX_NETWORK === "local") {
+        return `http://localhost:4943/?canisterId=${process.env.II_CANISTER_ID}`;
+    } else if (process.env.DFX_NETWORK === "ic") {
+        return `https://identity.ic0.app/`;
+    } else {
+        return `https://${process.env.II_CANISTER_ID}.dfinity.network`;
+    }
+}
