@@ -173,7 +173,11 @@ export const idlFactory = ({ IDL }) => {
     'mintNFT' : IDL.Func([MintRequest], [TokenIndex], []),
     'mintReservedNFT' : IDL.Func([TokenType], [TokenIndex], []),
     'reserveNFT' : IDL.Func([ReserveRequest], [], []),
-    'reservedWalletOfOwner' : IDL.Func([], [IDL.Vec(TokenReservation)], []),
+    'reservedWalletOfOwner' : IDL.Func(
+        [IDL.Principal],
+        [IDL.Vec(TokenReservation)],
+        [],
+      ),
     'setMinter' : IDL.Func([IDL.Principal], [], []),
     'setTokenTypeData' : IDL.Func(
         [
@@ -195,7 +199,11 @@ export const idlFactory = ({ IDL }) => {
     'tokenIdentifier' : IDL.Func([IDL.Nat32], [IDL.Text], ['query']),
     'tokenType' : IDL.Func([TokenIdentifier__1], [Result], ['query']),
     'transfer' : IDL.Func([TransferRequest], [TransferResponse], []),
-    'walletOfOwner' : IDL.Func([], [IDL.Vec(TokenWalletRecord)], []),
+    'walletOfOwner' : IDL.Func(
+        [IDL.Principal],
+        [IDL.Vec(TokenWalletRecord)],
+        [],
+      ),
   });
   return fishverse_ext;
 };

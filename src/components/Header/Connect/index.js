@@ -25,6 +25,7 @@ const Connect = (props) => {
   const [identity, setIdentity] = useRecoilState(identityState);
   const [agent, setAgent] = useRecoilState(agentState);
   const [principal, setPrincipal] = useRecoilState(principalState);
+  const loggedIn = localStorage.getItem('accessToken');
 
   const [mergeError, setMergeError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -186,9 +187,9 @@ const Connect = (props) => {
 
       <NavLink
         className={cn("button-white", styles.buttonConnect)}
-        to={'#'}
+        to={ loggedIn ? '#' : '/' }
         onClick={active ? () => setVisible2(true) : () => setVisible(true)}>
-        {active ? <span className={cn(styles.walletKey)}>{isMobile ? `${principal.substr(0, 3)}...${principal.substr(-1, 1)}` : `${principal.substr(0, 8)}...${principal.substr(-6, 6)}`}</span> : !identity && principal ? <span>Connect</span> : <span>Connect</span>}
+        {active ? <span className={cn(styles.walletKey)}>{isMobile ? `${principal.substr(0, 3)}...${principal.substr(-1, 1)}` : `${principal.substr(0, 8)}...${principal.substr(-6, 6)}`}</span> : loggedIn ? <span>Connect</span> : <span>Log In</span>}
       </NavLink>
     </>
   );

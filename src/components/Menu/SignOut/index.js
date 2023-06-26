@@ -14,6 +14,7 @@ const SignOut = (props) => {
 
   const logout = async () => {
     localStorage.setItem("accessToken", "")
+    localStorage.setItem("restoreSession", "false")
     history.push("/")
   }
 

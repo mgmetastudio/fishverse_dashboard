@@ -8,10 +8,11 @@ export const fetchWallet = selector({
   get: async ({ get }) => {
     const agent = get(agentState);
     const tokenTypeData = get(fetchTokenTypeData);
+    const principal = get(principalState);
 
     if (agent !== null && tokenTypeData) {
-      const ownedNFTs = await getOwnedNFTWallet(agent, tokenTypeData)
-      const reservedNFTs = await getReservedNFTWallet(agent, tokenTypeData)
+      const ownedNFTs = await getOwnedNFTWallet(agent, principal, tokenTypeData)
+      const reservedNFTs = await getReservedNFTWallet(agent, principal, tokenTypeData)
       return ownedNFTs.concat(reservedNFTs);
     }
     return [];

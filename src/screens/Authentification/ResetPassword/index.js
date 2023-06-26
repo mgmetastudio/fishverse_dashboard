@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styles from "./ResetPassword.module.sass";
 import cn from "classnames";
 import FadeIn from 'react-fade-in';
+import axios from 'axios';
+import { getApiConfig } from '../../../functions/api';
 
 const ResetPassword = () => {
   const [email, setEmail] = useState('');

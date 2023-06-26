@@ -43,7 +43,7 @@ type fishverse_ext =
    mintNFT: (MintRequest) -> (TokenIndex);
    mintReservedNFT: (TokenType) -> (TokenIndex);
    reserveNFT: (ReserveRequest) -> ();
-   reservedWalletOfOwner: () -> (vec TokenReservation);
+   reservedWalletOfOwner: (principal) -> (vec TokenReservation);
    setMinter: (principal) -> ();
    setTokenTypeData: (TokenType, text, text, text, text, text, opt text,
     opt vec TokenAttributes) -> ();
@@ -53,7 +53,7 @@ type fishverse_ext =
    tokenIdentifier: (nat32) -> (text) query;
    tokenType: (TokenIdentifier__1) -> (Result) query;
    transfer: (TransferRequest) -> (TransferResponse);
-   walletOfOwner: () -> (vec TokenWalletRecord);
+   walletOfOwner: (principal) -> (vec TokenWalletRecord);
  };
 type User__1 = 
  variant {

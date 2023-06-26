@@ -139,7 +139,7 @@ export interface fishverse_ext {
   'mintNFT' : ActorMethod<[MintRequest], TokenIndex>,
   'mintReservedNFT' : ActorMethod<[TokenType], TokenIndex>,
   'reserveNFT' : ActorMethod<[ReserveRequest], undefined>,
-  'reservedWalletOfOwner' : ActorMethod<[], Array<TokenReservation>>,
+  'reservedWalletOfOwner' : ActorMethod<[Principal], Array<TokenReservation>>,
   'setMinter' : ActorMethod<[Principal], undefined>,
   'setTokenTypeData' : ActorMethod<
     [
@@ -160,6 +160,6 @@ export interface fishverse_ext {
   'tokenIdentifier' : ActorMethod<[number], string>,
   'tokenType' : ActorMethod<[TokenIdentifier__1], Result>,
   'transfer' : ActorMethod<[TransferRequest], TransferResponse>,
-  'walletOfOwner' : ActorMethod<[], Array<TokenWalletRecord>>,
+  'walletOfOwner' : ActorMethod<[Principal], Array<TokenWalletRecord>>,
 }
 export interface _SERVICE extends fishverse_ext {}

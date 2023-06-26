@@ -17,6 +17,8 @@ import YourStakes from "./screens/YourStakes";
 import ReferralProgram from "./screens/ReferralProgram";
 import DailyQuests from "./screens/DailyQuests";
 import { RecoilRoot } from "recoil";
+import PasswordResetConfirm from "./screens/PasswordResetConfirm";
+import AccountConfirmEmail from "./screens/AccountConfirmEmail";
 
 function requireAuth(component) {
     if (!localStorage.getItem('accessToken')) {
@@ -122,6 +124,18 @@ function App({ Component, pageProps }) {
                             <Page withMainLayout={true}>
                                 <YourStakes />
                             </Page>)
+                    )}
+                    />
+                    <Route exact path="/account-confirm-email/:key/" render={() => (
+                        <Page>
+                            <AccountConfirmEmail />
+                        </Page>
+                    )}
+                    />
+                    <Route exact path="/password-reset/confirm/:uid/:token" render={() => (
+                        <Page>
+                            <PasswordResetConfirm />
+                        </Page>
                     )}
                     />
                     <Route path="*" render={() => (

@@ -640,8 +640,8 @@ shared (install) actor class fishverse_ext(init_minter : Principal) = this {
     };
   };
 
-  public shared(msg) func walletOfOwner() : async [TokenWalletRecord] {
-    let aid = AID.fromPrincipal(msg.caller, null);
+  public shared(msg) func walletOfOwner(owner: Principal) : async [TokenWalletRecord] {
+    let aid = AID.fromPrincipal(owner, null);
     let ownerTokens = _ownerTokens.get(aid);
 
      let retrieveTokenType = func(tokenid : TokenIndex) : TokenWalletRecord {
@@ -662,8 +662,8 @@ shared (install) actor class fishverse_ext(init_minter : Principal) = this {
     };
   };
 
-  public shared(msg) func reservedWalletOfOwner() : async [TokenReservation] {
-    let aid = AID.fromPrincipal(msg.caller, null);
+  public shared(msg) func reservedWalletOfOwner(owner: Principal) : async [TokenReservation] {
+    let aid = AID.fromPrincipal(owner, null);
     let tokenReservasions = _tokenReservasion.get(aid);
     switch (tokenReservasions) {
       case (?tokenReservasions) {

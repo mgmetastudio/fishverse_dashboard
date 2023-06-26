@@ -1,11 +1,13 @@
+import { Principal } from "@dfinity/principal";
 import { getNFTActor } from "./actor";
 
 
-export const getOwnedNFTWallet = async (agent, tokenTypeData) => {
+export const getOwnedNFTWallet = async (agent, principal, tokenTypeData) => {
     let wallet = [];
     const fishverse_ext =  getNFTActor(agent);
-    if (tokenTypeData && Object.keys(tokenTypeData).length > 0 && agent && fishverse_ext) {
-        return await fishverse_ext.walletOfOwner().then((result) => {
+    const principalObj = Principal.fromText(principal);
+    if (tokenTypeData && Object.keys(tokenTypeData).length > 0 && agent && fishverse_ext && principalObj) {
+        return await fishverse_ext.walletOfOwner(principalObj).then((result) => {
             for (let i = 0; i < result.length; i++) {
                 let tokenType = result[i]["tokenType"]
                 let nft = tokenTypeData[tokenType];
@@ -22,11 +24,12 @@ export const getOwnedNFTWallet = async (agent, tokenTypeData) => {
     return wallet;
 }
 
-export const getReservedNFTWallet = async (agent, tokenTypeData) => {
+export const getReservedNFTWallet = async (agent, principal, tokenTypeData) => {
     let wallet = [];
     const fishverse_ext = getNFTActor(agent);
-    if (tokenTypeData && Object.keys(tokenTypeData).length > 0 && agent && fishverse_ext) {
-        return fishverse_ext.reservedWalletOfOwner().then((result) => {
+    const principalObj = Principal.fromText(principal);
+    if (tokenTypeData && Object.keys(tokenTypeData).length > 0 && agent && fishverse_ext && principalObj) {
+        return fishverse_ext.reservedWalletOfOwner(principalObj).then((result) => {
             let wallet = [];
             for (let i = 0; i < result.length; i++) {
                 let tokenType = result[i]["tokenType"]
