@@ -1,7 +1,6 @@
 export const getApiConfig = (auth = true) => {
     let config = {
-        baseURL: 'http://localhost:8000',
-        // baseURL: 'https://api-fisher.thefishverse.com',
+        baseURL: 'https://api-fisher.thefishverse.com',
         headers: {}
     };
     if (auth == true) {
