@@ -640,7 +640,7 @@ shared (install) actor class fishverse_ext(init_minter : Principal) = this {
     };
   };
 
-  public shared(msg) func walletOfOwner(owner: Principal) : async [TokenWalletRecord] {
+  public func walletOfOwner(owner: Principal) : async [TokenWalletRecord] {
     let aid = AID.fromPrincipal(owner, null);
     let ownerTokens = _ownerTokens.get(aid);
 
@@ -662,7 +662,7 @@ shared (install) actor class fishverse_ext(init_minter : Principal) = this {
     };
   };
 
-  public shared(msg) func reservedWalletOfOwner(owner: Principal) : async [TokenReservation] {
+  public func reservedWalletOfOwner(owner: Principal) : async [TokenReservation] {
     let aid = AID.fromPrincipal(owner, null);
     let tokenReservasions = _tokenReservasion.get(aid);
     switch (tokenReservasions) {
