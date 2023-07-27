@@ -49,7 +49,7 @@ const AccountInfo = () => {
       </div>   
       <div className={cn(styles.container)}>
         <div className={cn(styles.walletAddress)}>
-            <h5>{ identity ? 'DFINITY' : 'Not available' } address</h5>
+            <h5>{ identity ? 'ICP' : 'Not available' } address</h5>
             <p>{ identity ? identity.getPrincipal().toText() : 'Wallet is not connected' }</p>
         </div>
         <div className={cn(styles.balancesContainer)}>
