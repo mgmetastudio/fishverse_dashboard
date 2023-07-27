@@ -67,13 +67,11 @@ const Login = ({ setShowResults, setShowReset }) => {
       setLoadingLogin(false);
       history.push(`/`);
     }).catch((error) => {
+      setLoadingLogin(false);
       const errors = []
       const data = error.response.data;
       for (const [key, value] of Object.entries(data)) {
-        console.error(`${value}`);
-        setLoadingLogin(false);
-        const checkIfTrue = JSON.stringify(value)
-        if (checkIfTrue === '["E-mail is not verified."]') {
+        if (value === 'E-mail is not verified.') {
           errors.push(value)
           setNotVerified(true)
         } else {
@@ -81,9 +79,11 @@ const Login = ({ setShowResults, setShowReset }) => {
           setNotVerified(false)
         }
       }
-      setErrorMessages(errors)
-
-      console.error(error);
+      if (errors.length > 0){
+        setErrorMessages(errors)
+      } else {
+        setErrorMessages(["Unknown error"])
+      }
     })
   };
 
