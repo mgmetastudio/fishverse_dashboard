@@ -44,7 +44,6 @@ const Footer = () => {
           <p>Main pages:</p>
           <ul>
             <li><a className={cn("link", styles.link)} href="https://thefishverse.com/" target="_blank">Home</a></li>
-            <li><a className={cn("link", styles.link)} href="https://docs.thefishverse.com/faq/" target="_blank">FAQ</a></li>
             <li><a className={cn("link", styles.link)} href="https://mglabs.gg/" target="_blank">About MG Labs</a></li>
           </ul>
         </div>
@@ -52,23 +51,23 @@ const Footer = () => {
           <p>Support:</p>
           <ul>
             <li><a className={cn("link", styles.link)} href="mailto:info@thefishverse.com" target="_blank">Email</a></li>
-            <li><a className={cn("link", styles.link)} href="https://discord.com/invite/BmztPmDuSt" target="_blank">Discord</a></li>
-            <li><a className={cn("link", styles.link)} href="#" target="_blank">Live chat</a></li>
+            <li><a className={cn("link", styles.link)} href="https://discord.gg/Gqsf8esc7q" target="_blank">Discord</a></li>
           </ul>
         </div>
         <div className={styles.row}>
-          <p>Project Information:</p>
+          <p>Game:</p>
           <ul>
             <li><a className={cn("link", styles.link)} href="https://docs.thefishverse.com/fishverse/" target="_blank">Whitepaper</a></li>
             <li><a className={cn("link", styles.link)} href="https://docsend.com/view/yfqtc3qpcqrnus8y" target="_blank">Pitchdeck</a></li>
             <li><a className={cn("link", styles.link)} href="https://docs.thefishverse.com/fishverse/token-economics/token-metrics" target="_blank">NFT Pitchdeck</a></li>
+            <li><a className={cn("link", styles.link)} href="https://play.google.com/store/apps/details?id=com.mglabsltd.fishverse" target="_blank">Download for Android</a></li>
+            <li><a className={cn("link", styles.link)} href="https://drive.google.com/file/d/1CXLpkzMXGjJ4BzZZEs3mZAXu64ZM1Xvl/view?usp=share_link" target="_blank">Download for PC</a></li>
           </ul>
         </div>
         <div className={styles.rowSocial}>
           <p>Join our community</p>
           <ul>
-            <li><a href="https://coinmarketcap.com/currencies" target="_blank">{random}</a></li>
-            <li><a href="https://discord.com/invite/BmztPmDuSt" target="_blank">{discord}</a></li>
+            <li><a href="https://discord.gg/Gqsf8esc7q" target="_blank">{discord}</a></li>
             <li><a href="https://twitter.com/TheFishverse" target="_blank">{twitter}</a></li>
             <li><a href="https://t.me/thefishverse" target="_blank">{telegram}</a></li>
             <li><a href="https://medium.com/@fishverse" target="_blank">{medium}</a></li>

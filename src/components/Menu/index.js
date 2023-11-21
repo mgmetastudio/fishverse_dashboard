@@ -54,7 +54,6 @@ const Main = (props) => {
                   </div>
                 </div>
               ))}
-              <a className={cn("link", styles.link)} href="https://docs.thefishverse.com/fishverse/faq" target="_blank">{menuIcons[7]}FAQ</a>
               <SignOut />
           </div>
       </div>
