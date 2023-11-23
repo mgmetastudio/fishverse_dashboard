@@ -1,6 +1,6 @@
 import Image from "../../../../components/Image";
 import styles from "./Download.module.sass";
-import { android, apple, macos, win } from "../../../../constants/svg";
+import { android, apple, macos, win, windowsDownload } from "../../../../constants/svg";
 
 const YoutubeVideos = () => {
   return (
@@ -13,8 +13,8 @@ const YoutubeVideos = () => {
       />
       <p>FishVerse is a revolutionary AAA fishing game that is open world, decentralized, and built on blockchain technology. It brings together millions of fishing and P2E enthusiasts. Inside a vibrant community where people can monetize by catching and utilizing NFT fish, competing in tournaments, completing missions, building businesses, and more... All of this is available on any device!</p>
       <div className={styles.downloadButtons}>
-        <a href="https://testflight.apple.com/join/COS7Qa6y" target="_blank">{apple}</a>
-        <a href="https://drive.google.com/file/d/1CXLpkzMXGjJ4BzZZEs3mZAXu64ZM1Xvl/view?usp=share_link" target="_blank">{android}</a>
+        <a href="https://play.google.com/store/apps/details?id=com.mglabsltd.fishverse" target="_blank">{android}</a>
+        <a href="https://drive.google.com/file/d/1CXLpkzMXGjJ4BzZZEs3mZAXu64ZM1Xvl/view?usp=share_link" target="_blank">{windowsDownload}</a>
       </div>
       <div className={styles.requirementsContainer}>
         <h4>System requirements for <span className={styles.greenish}>Windows</span>{win}</h4>
